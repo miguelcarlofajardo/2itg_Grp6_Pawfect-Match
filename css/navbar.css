@@ -1,4 +1,3 @@
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
 *{
     padding: 0;
@@ -78,14 +77,6 @@ header{
 .navbar a:hover:active{
     color: #2a4d50;
 }
-.navbar a.active {
-  color: #2a4d50;
-  font-weight: bold;
-}
-.navbar a.active:hover {
-  color: #ffffec;
-  font-weight: bold;
-}
 
 #menu-icon{
     font-size: 35px;
@@ -97,6 +88,9 @@ header{
 
 /*Responsiveness*/
 @media (max-width:1280px){
+  #menu-icon {
+    display: block;
+  }
     header{
         padding: 14px 2%;
         transition: .2s;
@@ -142,6 +136,9 @@ header{
 }
 
 @media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
   header {
     padding: 14px 2%;
     transition: .2s;
@@ -152,21 +149,3 @@ header{
     font-size: 0.9rem;
   }
 }
-
-</style>
-<header>
-        <a href="#" class="logo">
-            <img src="img/pawfectmatchlogo.png" alt="ARK Logo" class="Logo" width="100" height="100">
-            <span>Pawfect Match</span>
-        </a>
-        <ul class="navbar">
-            <li><a href="index.php" class="active">Home</a></li>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="petlist.php">Meet Your Furbaby</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Browse</a></li>
-            <li><a href="articles.php">Help</a></li>
-        </ul>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
-</header>

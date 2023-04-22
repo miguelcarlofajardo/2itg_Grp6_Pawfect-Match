@@ -21,7 +21,7 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
 <!--navbar-->
-<?php include "navbar.php"; ?>
+<?php require_once "../components/navbar.php"; ?>
 
 <!--news-->
 <section id="news" class="section-padding">
@@ -99,7 +99,7 @@
         </div>
 
 <!--footer-->
-<?php include "footer.php"; ?>
+<?php require_once "../components/footer.php"; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
