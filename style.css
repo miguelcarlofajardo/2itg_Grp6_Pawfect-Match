@@ -9,3 +9,11 @@ p{
     font-family: 'Dongle', sans-serif;
     font-size: 100px;
 }
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 50%;
+    padding-right: 20px;
+}
