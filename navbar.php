@@ -30,7 +30,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 28px 12%;
+    padding: 28px 6%;
     transition: all .50s ease;
     background-color: var(--text-color);
 }
@@ -165,6 +165,7 @@ header{
             <li><a href="petlist.php">Meet Your Furbaby</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Browse</a></li>
+            <li><a href="articles.php">Help</a></li>
         </ul>
 
         <div class="bx bx-menu" id="menu-icon"></div>
