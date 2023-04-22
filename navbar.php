@@ -11,8 +11,8 @@
 }
 :root{
     --bg-color: #fff;
-    --text-color: #222327;
-    --main-color: #446879;
+    --text-color: #BB6b24;
+    --main-color: #222327;
 }
 body{
     min-height: 100vh;
@@ -40,6 +40,8 @@ header{
     align-items: center;
     color: var(--bg-color);
     text-decoration: none;
+    border-radius: 50%;
+    padding-right: 20px;
 }
 .logo i{
     color: var(--main-color);
@@ -54,7 +56,7 @@ header{
     text-decoration: none;
 }
 .logo span:hover{
-    color: #223742;
+    color: #2a4d50;
     transition: all .50s ease;
 }
 /*Navbar Properties*/
@@ -66,16 +68,25 @@ header{
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
-    padding: 5px 0;
+    padding: 20px 0;
     margin: 0px 30px;
     transition: all .50s ease;
 }
 .navbar a:hover{
-    color: var(--main-color);
+    color: #2a4d50;
 }
 .navbar a:hover:active{
-    color: var(--main-color);
+    color: #2a4d50;
 }
+.navbar a.active {
+  color: #2a4d50;
+  font-weight: bold;
+}
+.navbar a.active:hover {
+  color: #ffffec;
+  font-weight: bold;
+}
+
 #menu-icon{
     font-size: 35px;
     color: var(--bg-color);
@@ -95,51 +106,65 @@ header{
         margin: 0px 20px;
     }
 }
-@media (max-width:1090px){
-    #menu-icon{
-        display: block;
-    }
-    .navbar{
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 270px;
-        height: 29vh;
-        background:var(--main-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        border-radius: 10px;
-        transition: all .50s ease;
-    }
-    .navbar a{
-        display: block;
-        margin: 12px 0;
-        padding: 0px 25px;
-        transition: all .50s ease;
-    }
-    .navbar a:hover{
-        color: var(--text-color);
-        transform: translateY(5px);
-    }
-    .navbar a:active{
-        color: var(--text-color);
-    }
-    .navbar.open{
-        right: 20%;
-    }
+@media (max-width: 1090px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: 29vh;
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all .50s ease;
+  }
+  .navbar a {
+    display: block;
+    margin: 12px 0;
+    padding: 0px 25px;
+    transition: all .50s ease;
+  }
+  .navbar a:hover {
+    color: #2a4d50;
+    transform: translateY(5px);
+  }
+  .navbar a:active {
+    color: #f19c24;
+  }
+  .navbar.open {
+    right: 20%;
+  }
 }
+
+@media (max-width: 768px) {
+  header {
+    padding: 14px 2%;
+    transition: .2s;
+  }
+  .navbar a {
+    padding: 5px 0;
+    margin: 0px 10px;
+    font-size: 0.9rem;
+  }
+}
+
 </style>
 <header>
         <a href="#" class="logo">
-            <img src="img/thyLogo.png" alt="ARK Logo" class="Logo" width="100" height="100">
-            <span>Always Remember our King</span>
+            <img src="img/pawfectmatchlogo.png" alt="ARK Logo" class="Logo" width="100" height="100">
+            <span>Pawfect Match</span>
         </a>
         <ul class="navbar">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="index.php" class="active">Home</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="petlist.php">Meet Your Furbaby</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Browse</a></li>
         </ul>
 
         <div class="bx bx-menu" id="menu-icon"></div>

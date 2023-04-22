@@ -1,5 +1,26 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+	*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dongle', sans-serif;
+    font-size: xx-large;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --bg-color: #fff;
+    --text-color: #f19c24;
+    --main-color: #222327;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-bottom: 50px;
+}
     /*Footer*/
 footer {
     background-image: url("../img/thyFooter-1.png ");
@@ -22,20 +43,23 @@ ul{
 	list-style: none;
 }
 .about{
-    font-family: 'Dongle', sans-serif;
-    font-size: xx-large;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: large;
 }
 .footer{
-	background-color: #24262b;
+	background-color: #2a4d50;
     padding: 70px 0;
+}
+.footer-p{
+	color: #fff;
 }
 .footer-col{
    width: 25%;
    padding: 0 15px;
 }
 .footer-col h4{
-	font-size: 18px;
-	color: #000;
+	font-size: 50px;
+	color: #fff;
 	text-transform: capitalize;
 	margin-bottom: 35px;
 	font-weight: 500;
@@ -46,13 +70,10 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #e91e63;
+	background-color: #BB6b24;
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
-}
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
 }
 .footer-col ul li a{
 	font-size: 16px;
@@ -70,19 +91,19 @@ ul{
 }
 .footer-col .social-links a{
 	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(88, 132, 159, 0.67);
+	height: 50px;
+	width: 50px;
+	background-color: #f19c24;
 	margin:0 10px 10px 0;
 	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #000;
+	line-height: 65px;
+	border-radius: 70%;
+	color: #2a4d50;
 	transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
-	color: #fff;
-	background-color: #24262b;
+	color: #ffffec;
+	background-color: #f19c24;
 }
 </style>
 <footer class="footer">
@@ -91,10 +112,7 @@ ul{
           <div class="footer-col">
               <h4>About Us</h4>
               <p class="about">
-            A.R.K.: Always Remember our King is a Christian website focused on community, 
-            kindness, and reflecting Christ's teachings in our daily lives. <br>
-            A.R.K. aims to create a space where individuals can declare their 
-            fiat and remember their King.
+            Pawfect Match
           </p>
           </div>
           <!--Footer Social Media-->
