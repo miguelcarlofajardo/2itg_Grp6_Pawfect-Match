@@ -13,6 +13,11 @@
                     Pawfect Match
                 </p>
             </div>
+            <div class="footer-col">
+            <div class="pawdesign">
+                <img src="../home/img/paw.png" alt="paw" width="200" height="200">
+            </div>
+            </div>
             <!--Footer Social Media-->
             <div class="footer-col">
                 <h4>follow us</h4>
@@ -22,11 +27,7 @@
                     <a href="https://www.instagram.com/p/CpZTsQoBAJJ/?utm_source=ig_web_copy_link"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="footer-col">
-            <div class="pawdesign">
-                <img src="../home/img/paw.png" alt="paw" width="200" height="200">
-            </div>
-            </div>
+            
         </div>
     </div>
 </footer>

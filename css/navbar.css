@@ -58,6 +58,17 @@ header{
     color: #2a4d50;
     transition: all .50s ease;
 }
+.brand-name {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 80px;
+  color: #fff;
+}
+.brand-name:hover {
+  color: #2a4d50;
+  transition: all .50s ease;
+}
+
 /*Navbar Properties*/
 .navbar{
     display: flex;

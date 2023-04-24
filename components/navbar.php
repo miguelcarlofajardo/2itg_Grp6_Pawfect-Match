@@ -2,8 +2,8 @@
 <header>
         <a href="#" class="logo">
             <img src="../home/img/pawfectmatchlogo.png" alt="Pawfect Match Logo" class="Logo" width="100" height="100">
-            <span>Pawfect Match</span>
         </a>
+        <span class="brand-name">Pawfect Match</span>
         <ul class="navbar">
             <li><a href="../home/index.php">Home</a></li>
             <li><a href="#">Our Story</a></li>
