@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="../css/navbar.css">
 <header>
         <a href="#" class="logo">
-            <img src="../home/img/PM-transparent green-logo.png" alt="Pawfect Match Logo" class="Logo" width="200" height="200">
+            <img src="../home/img/PM-transparent green-logo.png" alt="Pawfect Match Logo" class="Logo" width="150" height="150">
+            <span class="brand-name">Pawfect Match</span>
         </a>
-        <span class="brand-name">Pawfect Match</span>
+       
         <ul class="navbar">
             <li><a href="../home/index.php">Home</a></li>
             <li><a href="#">Our Story</a></li>

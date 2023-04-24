@@ -39,8 +39,6 @@ header{
     align-items: center;
     color: var(--bg-color);
     text-decoration: none;
-    border-radius: 50%;
-    padding-right: 20px;
 }
 .logo i{
     color: var(--main-color);
@@ -61,7 +59,7 @@ header{
 .brand-name {
   display: inline-block;
   vertical-align: middle;
-  font-size: 80px;
+  font-size: 50px;
   color: #fff;
 }
 .brand-name:hover {
@@ -72,6 +70,7 @@ header{
 /*Navbar Properties*/
 .navbar{
     display: flex;
+    padding-top: 40px;
 }
 .navbar a{
     color: var(--bg-color);
@@ -125,7 +124,6 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    border-radius: 10px;
     transition: all .50s ease;
   }
   .navbar a {
