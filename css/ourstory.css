@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+
+
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+
+.ourstorydesc{
+    color: rgb(204, 98, 6);
+    text-indent: 10px;
+    font-size:16pt;
+    text-align: center;
+  }
+
+  h3{
+    text-align: center;
+    color: #f19c24;
+  }
+  

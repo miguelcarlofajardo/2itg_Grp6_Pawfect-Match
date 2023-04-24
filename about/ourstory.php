@@ -16,7 +16,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
 </head>
+
+<title> Our Story </title>
 <body>
+    <?php require_once "../components/navbar.php"; ?>
+
+    <div class="ourstory">
+      <img src="img/paw.png" alt="paw logo" width="250" height="250">
+    </div>
+    
+<br><br><br>
+
+    <div class="container px-5" id="OurStory">
+      <div class="row gx-5 align-items-center">
+        <div class="col-lg-12">
+            <br><br><br>
+            <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif"> Find Your Pawfect Match! </h3> 
+            <img src="../home/img/adoptdog.jpeg" alt="Dog with owner" style="width:100%"> 
+            <div class="container p-2">
+        </div>
+
+    <p class="ourstorydesc" style= "font-family: Verdana, Geneva, Tahoma, sans-serif;" text-align: center font-size:20%;>
+        Pawfect Match is a team of passionate animal lovers dedicated to helping pets find their forever homes. 
+        Our mission is to provide a platform that connects adoptable pets with loving families who are 
+        committed to providing them with a safe and nurturing environment.
+        </p>
+</div>
+       <div class="container p-2">
+       <p class="ourstorydesc" style= "font-family: Verdana, Geneva, Tahoma, sans-serif;" text-align: center font-size:20%;>
+        At our core, we believe that getting a pet not only enriches your life but also the life of the 
+        animal you are adopting. We are grateful to be a part of the trip that pets take us on as they bring happiness, love, and friendship 
+        into our lives. We appreciate you considering adoption, and we genuinely hope that our website can assist you in finding your Pawfect Match.
+    </p>
+</div>
+       
+
+<?php require_once "../components/footer.php"; ?>
+
     
 </body>
 </html>
