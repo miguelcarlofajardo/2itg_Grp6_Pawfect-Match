@@ -2,15 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Articles</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-logo.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawfect Match | Articles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/article.css">
     <link rel="shortcut icon" href="img/pawfectmatchlogo.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -19,17 +18,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar">
+<body>
 <!--navbar-->
 <?php require_once "../components/navbar.php"; ?>
 
-<!--news-->
-<section id="news" class="section-padding">
-    <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+<!--body-->
+<section id="articles" class="section-padding">
+    <div class="col-12 text-center">
         <h1> How to take care of your new pet? </h1>
-        <p>Articles</p>
+        <h2>Articles</h2>
         <br></br>
-            <div class="container-c">
+            <div class="container-article">
             <div class="text"> 
                 <img src="./images/article-image-1.png" alt="">
                 <h3> Everything a First-Time Dog Owner Should Know </h3> 
@@ -42,8 +41,8 @@
             </div>
         </div>
     <br>
-    <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-        <div class="container-c">
+    <div class="col-12 text-center">
+        <div class="container-article">
             <div class="text"> 
                 <img src="./images/article-image-2.png" alt="">
                 <h3> 10 Responsible Pet Care Tips </h3> 
@@ -56,8 +55,8 @@
             </div>
         </div>
     <br>
-    <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-        <div class="container-c">
+    <div class="col-12 text-center">
+        <div class="container-article">
             <div class="text">
                 <img src="./images/article-image-3.jpg" alt=""> 
                 <h3> The Basic Necessities of Proper Pet Care </h3> 
@@ -70,8 +69,8 @@
             </div>
         </div>
     <br>
-    <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-         <div class="container-c">
+    <div class="col-12 text-center">
+         <div class="container-article">
             <div class="text">
                 <img src="./images/article-image-4.png" alt=""> 
                 <h3> 18 essential tips for first-time pet owners </h3> 
@@ -84,8 +83,8 @@
              </div>
         </div>
     <br>
-    <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-        <div class="container-c">
+    <div class="col-12 text-center">
+        <div class="container-article">
             <div class="text">
                 <img src="./images/article-image-5.png" alt=""> 
                 <h3> The Basic Necessities of Proper Pet Care </h3> 
@@ -98,13 +97,16 @@
             </div>
         </div>
 
+    <div class="radio-switch">
+        <label class="radio-switch__label radio-switch__label--selected">
+        <input type="radio" class="radio-switch__input" href="./article/video.php "/>
+        Article
+        </label>
+        Video
+    </div>
+
 <!--footer-->
 <?php require_once "../components/footer.php"; ?>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="./assets/js/main.js"></script>
 </body>
 
 </html>
