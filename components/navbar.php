@@ -9,7 +9,6 @@
             <li><a href="#">Our Story</a></li>
             <li><a href="../gallery/petlist.php">Meet Your Furbaby</a></li>
             <li><a href="#">FAQ</a></li>
-            <li><a href="#">Browse</a></li>
             <li><a href="../article/articles.php">Help</a></li>
         </ul>
 
