@@ -4,7 +4,7 @@
         <div class="row">
         <div class="footer-col">
             <div class="pawdesign">
-                <img src="../home/img/pawfectmatchlogo.png" alt="paw" width="150" height="150">
+                <img src="../home/img/PM-transparent orange-logo.png" alt="paw" width="200" height="200">
             </div>
             </div>
             <div class="footer-col">

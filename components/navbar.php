@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../css/navbar.css">
 <header>
         <a href="#" class="logo">
-            <img src="../home/img/pawfectmatchlogo.png" alt="Pawfect Match Logo" class="Logo" width="100" height="100">
+            <img src="../home/img/PM-transparent green-logo.png" alt="Pawfect Match Logo" class="Logo" width="200" height="200">
         </a>
         <span class="brand-name">Pawfect Match</span>
         <ul class="navbar">
