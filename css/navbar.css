@@ -32,6 +32,7 @@ header{
     padding: 28px 6%;
     transition: all .50s ease;
     background-color: var(--text-color);
+    height: fit-content;
 }
 /*Logo & Text Property*/
 .logo{

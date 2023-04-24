@@ -16,55 +16,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
 </head>
 <body>
+
 <?php require_once "../components/navbar.php"; ?>
 <p class="space">
 
 </p>
+
 <div class="imgGallery p-2">
-<div class="row">
-  <div class="col-md-3 pt-2 pb-3">
-    <div class="thumbnail" style="background-color:black">
-      <a href="TouristDest_blogs.php#CandabaSwamp">
-        <img src="../home/img/pawfectmatchlogo.png" alt="Candaba Swamp" style="width:100%">
-      </a>
-      <div class="middle">
-        <div class="text">Pawfect</div>
-        </div>
+  <div class="row">
+    <div class="col-md-3 pt-2 pb-3">
+      <div class="thumbnail" style="background-color:black">
+        <a href="TouristDest_blogs.php#CandabaSwamp">
+          <img src="../home/img/pawfectmatchlogo.png" alt="Candaba Swamp" style="width:100%">
+        </a>
+        <div class="middle">
+          <div class="text">Pawfect</div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-3 pt-2 pb-3">
+      <div class="thumbnail">
+        <a href="TouristDest_blogs.php#Arayat">
+          <img src="../home/img/pawfectmatchlogo.png" alt="Mt. Arayat" style="width:100%">
+        </a>
+        <div class="middle">
+          <div class="text">Pawfect</div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-3 pt-2 pb-3">
+      <div class="thumbnail">
+        <a href="TouristDest_blogs.php#Pinatubo">
+          <img src="../home/img/pawfectmatchlogo.png" alt="Pinatubo" style="width:100%">
+        </a>
+        <div class="middle">
+          <div class="text">Pawfect</div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-3 pt-2 pb-3">
+      <div class="thumbnail">
+        <a href="TouristDest_blogs.php#AquaBeachClub">
+          <img src="../home/img/pawfectmatchlogo.png" alt="Aqua Beach Club" style="width:100%">
+        </a>
+        <div class="middle">
+          <div class="text">Pawfect</div>
+          </div>
+      </div>
     </div>
   </div>
-  <div class="col-md-3 pt-2 pb-3">
-    <div class="thumbnail">
-      <a href="TouristDest_blogs.php#Arayat">
-        <img src="../home/img/pawfectmatchlogo.png" alt="Mt. Arayat" style="width:100%">
-      </a>
-      <div class="middle">
-        <div class="text">Pawfect</div>
-        </div>
-    </div>
-  </div>
-  <div class="col-md-3 pt-2 pb-3">
-    <div class="thumbnail">
-      <a href="TouristDest_blogs.php#Pinatubo">
-        <img src="../home/img/pawfectmatchlogo.png" alt="Pinatubo" style="width:100%">
-      </a>
-      <div class="middle">
-        <div class="text">Pawfect</div>
-        </div>
-    </div>
-  </div>
-  <div class="col-md-3 pt-2 pb-3">
-    <div class="thumbnail">
-      <a href="TouristDest_blogs.php#AquaBeachClub">
-        <img src="../home/img/pawfectmatchlogo.png" alt="Aqua Beach Club" style="width:100%">
-      </a>
-      <div class="middle">
-        <div class="text">Pawfect</div>
-        </div>
-    </div>
-  </div>
-</div>
 </div>
 
+
 <?php require_once "../components/footer.php"; ?>
+
 </body>
 </html>
