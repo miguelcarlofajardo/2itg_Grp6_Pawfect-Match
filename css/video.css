@@ -11,12 +11,20 @@ body {
     padding-top: 150px;
 }
 
-.container-video {
+.container-video-a {
     display: flex;
-    padding: 25px 50px 75px 100px;  
+    padding: 75px;  
     justify-content: center;
-
+    background-color: #f19c24;
 }
+
+.container-video-b {
+  display: flex;
+  padding: 75px;  
+  justify-content: center;
+  background-color: white;
+}
+
     @media only screen and (min-width: 768px) {
         iframe{
           height: 13em;

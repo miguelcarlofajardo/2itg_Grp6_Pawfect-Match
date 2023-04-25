@@ -29,7 +29,7 @@
     <div class="col-12 text-center">
         <h1> How to take care of your new pet? </h1>
         <h2>Videos</h2>
-        <div class="container-video">
+        <div class="container-video-a">
             <div class="card">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/peUVLEUj-AM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="card-body">
@@ -40,7 +40,7 @@
         </div>
     </div>
     <div class="col-12 text-center">
-        <div class="container-video">        
+        <div class="container-video-b">        
             <div class="card">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Yzv0gXqoCkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="card-body">
@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="col-12 text-center">
-        <div class="container-video">
+        <div class="container-video-a">
             <div class="card">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Tn3lZE0rRBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="card-body">
@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="col-12 text-center">
-        <div class="container-video">
+        <div class="container-video-b">
             <div class="card">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DCmaoBujsAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="card-body">
@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="col-12 text-center">
-        <div class="container-video">
+        <div class="container-video-a">
             <div class="card">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jSC3OMz78EQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="card-body">
