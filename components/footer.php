@@ -27,7 +27,7 @@
                     <a href="https://www.instagram.com/p/CpZTsQoBAJJ/?utm_source=ig_web_copy_link"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </footer>

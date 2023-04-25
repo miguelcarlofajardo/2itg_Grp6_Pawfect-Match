@@ -2,22 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 body{
-	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
 }
 
 .space{
     padding-top: 150px;
-}
-
-.container{
-	max-width: 1170px;
-	margin:auto;
-}
-
-.row{
-	display: flex;
-	flex-wrap: wrap;
 }
 
 /* hover with name */
@@ -65,4 +54,3 @@ body{
 	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.5);
   }
-  
