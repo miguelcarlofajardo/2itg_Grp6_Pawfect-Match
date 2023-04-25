@@ -12,17 +12,37 @@ body {
 }
 
 .container-video-a {
+  margin-top: 50px;
     display: flex;
     padding: 75px;  
-    justify-content: center;
-    background-color: #f19c24;
+    justify-content: left;
+    background-color: #f19c24e0;
+    overflow: hidden;
 }
 
 .container-video-b {
   display: flex;
   padding: 75px;
-  justify-content: center;
+  padding-bottom: 25px;
   background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.card-body{
+  color: #2a4d50;
+}
+
+.card.card-right{
+  padding-left: 50px;
+}
+
+.card.card-left{
+  padding-right: 50px;
+}
+
+.card.card-right, .card.card-left, .card.card-a{
+  background-color: transparent;
+  border: none;
 }
 
     @media only screen and (min-width: 768px) {
