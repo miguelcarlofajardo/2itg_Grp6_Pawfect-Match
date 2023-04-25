@@ -33,7 +33,7 @@
             <div class="card">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/peUVLEUj-AM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="card-body">
-                    <h5 class="card-title">Before getting a puppy</h5>
+                    <h5 class="card-title"> Before getting a puppy </h5>
                     <p class="card-text">Things to know before getting a puppy by Doctor Mike </p>
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <div class="card">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Yzv0gXqoCkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="card-body">
-                    <h5 class="card-title">The Basics</h5>
+                    <h5 class="card-title"> The Basics </h5>
                     <p class="card-text">Pet Care Basics by MiamiDadeCounty</p>
                 </div>
             </div>
@@ -55,7 +55,7 @@
             <div class="card">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Tn3lZE0rRBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="card-body">
-                    <h5 class="card-title">Guide to Puppy Care </h5>
+                    <h5 class="card-title"> A Guide to Puppy Care </h5>
                     <p class="card-text"> A video on how to take care of a puppy by AnimalWised </p>
                 </div>
             </div>
@@ -77,7 +77,7 @@
             <div class="card">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jSC3OMz78EQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="card-body">
-                    <h5 class="card-title">Not realizing you're already hurting youre dog </h5>
+                    <h5 class="card-title"> Not realizing you're already hurting youre dog </h5>
                     <p class="card-text"> Ways you are hurting your dog without realizing it by Jaw-Dropping Facts </p>
                 </div>
             </div>

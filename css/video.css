@@ -20,9 +20,9 @@ body {
 
 .container-video-b {
   display: flex;
-  padding: 75px;  
+  padding: 75px;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
     @media only screen and (min-width: 768px) {
