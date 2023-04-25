@@ -31,7 +31,7 @@
       <div class="row gx-5 align-items-center">
         <div class="col-lg-12">
             <br><br><br>
-            <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif"> Find Your Pawfect Match! </h3> 
+            <h1> Find Your Pawfect Match! </h1> 
             <img src="../home/img/adoptdog.jpeg" alt="Dog with owner" style="width:100%"> 
             <div class="container p-2">
         </div>
@@ -47,10 +47,11 @@
         At our core, we believe that getting a pet not only enriches your life but also the life of the 
         animal you are adopting. We are grateful to be a part of the trip that pets take us on as they bring happiness, love, and friendship 
         into our lives. We appreciate you considering adoption, and we genuinely hope that our website can assist you in finding your Pawfect Match.
-    </p>
+        </p>
 </div>
        
 
+<!--footer-->
 <?php require_once "../components/footer.php"; ?>
 
     
