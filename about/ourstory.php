@@ -156,8 +156,8 @@
 
 <!--Social Media hyperlink-->
 
-<a href="http://www.petrescue.com.au/subscribe"><span style="color:#09694c;"> 
-Subscribe&nbsp;to our mailing list.</span></a>
+<a href="https://www.facebook.com/profile.php?id=100092277728501"><span style="color:#09694c;"> 
+Follow us and&nbsp;keep updated!</span></a>
 
 
 <!--
