@@ -26,8 +26,8 @@
     <div class="ourstory">
       <img src="img/paw.png" alt="paw logo" width="250" height="250">
     </div>
-    
-<br><br><br>
+
+    <h1 style="text-align: left;"> About Us </h1>
 
     <div class="container px-5" id="OurStory">
       <div class="row gx-5 align-items-center">
@@ -56,7 +56,7 @@
     </div>
 </div>
 
-       <br>       
+<br><br><br>
 
 <!--unfinished next part-->
 
@@ -75,21 +75,19 @@
 <div class="clearfix"></div>
 -->
 
-
-
-<h2 style ="text-align: center;">Responsive Image Gallery</h2>
-
+<h2 style= "font-family: Roboto Condensed;" text-align: center>Placeholder</h2>
+<br>
 <table cellspacing="10">
     <tr>
         <td>
              <div class="responsive">
              <div class="gallery">
              <img src="../home/img/pm-banner3.png" alt="Cinque Terre" width="600" height="400">
-            <div class="desc">Add a description of the image here</div>
+            <div class="desc">Add a description of the image here   </div>
         </td>
       
     <td>    
-        <p>
+        <p style= "font-family: Roboto Condensed;" text-align: center>
           How many times were you frustrated while looking
           out for a good collection of programming/
           algorithm/ interview questions? What did you
@@ -105,18 +103,18 @@
 <table cellspacing="10">
     <tr>
       <td>
-      <div class="responsive">
+        <div class="responsive">
             <div class="gallery">
             <img src="../home/img/pm-banner4.png" alt="Cinque Terre" width="600" height="400">
             <div class="desc">Add a description of the image here</div>
       </td>
      <td>
           
-        <p>
-          How many times were you frustrated while looking
-          out for a good collection of programming/
-          algorithm/ interview questions? What did you
-          expect and what did you get?
+         <p style= "font-family: Roboto Condensed;" text-align: center>
+             How many times were you frustrated while looking
+             out for a good collection of programming/
+             algorithm/ interview questions? What did you
+             expect and what did you get?
         </p>
   
       </td>
@@ -135,7 +133,7 @@
       </td>
      <td>
           
-        <p>
+        <p style= "font-family: Roboto Condensed;" text-align: center>
           How many times were you frustrated while looking
           out for a good collection of programming/
           algorithm/ interview questions? What did you
@@ -145,6 +143,21 @@
       </td>
     </tr>
   </table>
+
+<br><br>
+
+<h3 style="text-align: center">
+    <b> <span style="color:#68b403;">
+        "Lorem ipsum lorem ipsum lorem ipsum"
+    </span>
+</b>
+
+<br>
+
+<!--Social Media hyperlink-->
+
+<a href="http://www.petrescue.com.au/subscribe"><span style="color:#09694c;"> 
+Subscribe&nbsp;to our mailing list.</span></a>
 
 
 <!--
