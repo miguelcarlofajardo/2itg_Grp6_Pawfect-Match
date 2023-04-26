@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Source+Sans+Pro&family=Source+Serif+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <?php require_once "../components/navbar.php"; ?>
@@ -32,9 +33,10 @@
       <div class="row gx-5 align-items-center">
         <div class="col-lg-12">
             <br><br>
-            <h1> Find Your Pawfect Match! </h1> 
-            <img src="../home/img/adoptdog.jpeg" alt="Dog with owner" style="width:100%"> 
+            <h1 style=" text-align: center;"> Find Your Pawfect Match! </h1> 
+            <img src="../home/img/adoptdog.jpeg" alt = "Dog with owner" style="width:100%"> 
         </div> 
+        
 <!-- temporary font for selection/replacement (roboto, source sans pro, source serif pro)-->
         <div class="container p-2">
             <p class="ourstorydesc" style= "font-family: Roboto Condensed;" text-align: center font-size:20%;>
@@ -55,15 +57,110 @@
 </div>
 
        <br>       
-<!--unfinished next part-->
-<img alt="our vision and mission" class ="center" src="https://d339b5nop2tkmp.cloudfront.net/uploads/pictures/1768/content_vision-tile-about-us-page-.jpg"  width="450px" height = "400px";> </div>
 
-<h3> Our vision and mission</h3>
+<!--unfinished next part-->
+
+
+<!--
+<div class="gallery">
+    <img src="../home/img/pm-banner1.png" alt="Cinque Terre" width="600" height="100">
+  <div class="desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  </div>
+</div>
+
+<div class="gallery">
+    <img src="../home/img/pm-banner1.png" alt="Cinque Terre" width="600" height="400">
+  <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </div>
+</div>
+
+<div class="clearfix"></div>
+-->
+
+
+
+<h2 style ="text-align: center;">Responsive Image Gallery</h2>
+
+<table cellspacing="10">
+    <tr>
+        <td>
+             <div class="responsive">
+             <div class="gallery">
+             <img src="../home/img/pm-banner3.png" alt="Cinque Terre" width="600" height="400">
+            <div class="desc">Add a description of the image here</div>
+        </td>
+      
+    <td>    
+        <p>
+          How many times were you frustrated while looking
+          out for a good collection of programming/
+          algorithm/ interview questions? What did you
+          expect and what did you get?
+        </p>
+  
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<table cellspacing="10">
+    <tr>
+      <td>
+      <div class="responsive">
+            <div class="gallery">
+            <img src="../home/img/pm-banner4.png" alt="Cinque Terre" width="600" height="400">
+            <div class="desc">Add a description of the image here</div>
+      </td>
+     <td>
+          
+        <p>
+          How many times were you frustrated while looking
+          out for a good collection of programming/
+          algorithm/ interview questions? What did you
+          expect and what did you get?
+        </p>
+  
+      </td>
+    </tr>
+  </table>
+
+<div class="clearfix"> </div>
+
+  <table cellspacing="10">
+    <tr>
+      <td>
+      <div class="responsive">
+            <div class="gallery">
+            <img src="../home/img/pm-banner3.png" alt="Cinque Terre" width="600" height="400">
+            <div class="desc">Add a description of the image here</div>
+      </td>
+     <td>
+          
+        <p>
+          How many times were you frustrated while looking
+          out for a good collection of programming/
+          algorithm/ interview questions? What did you
+          expect and what did you get?
+        </p>
+  
+      </td>
+    </tr>
+  </table>
+
+
+<!--
+     <img src= "../home/img/pm-banner1.png" alt="our vision and mission" class ="center"   width="450px" height = "400px";> </div>
+</div>
+
+
+
+<h2> Our vision and mission</h2>
 
 <p> 
-We have a vision of a future for Australia where every pet is safe, respected and loved. And to get us there,
+We have a vision of a future for Australia where every pet is safe,<br> respected and loved. And to get us there,
 we’ve developed a mission that looks at the bigger picture, drives social change and unites to save lives. 
 </p>
+-->
+
 
 <!--footer-->
 <?php require_once "../components/footer.php"; ?>
