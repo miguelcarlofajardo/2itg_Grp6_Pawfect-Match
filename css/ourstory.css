@@ -14,8 +14,11 @@ body{
 .ourstorydesc{
     color: rgb(204, 98, 6);
     text-indent: 10px;
-    font-size:16pt;
+    font-size:20pt;
     text-align: center;
+    /* I just added a fallback font if the set font style fails (-Leo) */
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   h1{
@@ -24,3 +27,14 @@ body{
     margin:auto;
 
   }
+
+
+  .gallery1{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+  
+}
+  

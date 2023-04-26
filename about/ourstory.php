@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Source+Sans+Pro&family=Source+Serif+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -29,13 +31,13 @@
     <div class="container px-5" id="OurStory">
       <div class="row gx-5 align-items-center">
         <div class="col-lg-12">
-            <br><br><br>
+            <br><br>
             <h1> Find Your Pawfect Match! </h1> 
             <img src="../home/img/adoptdog.jpeg" alt="Dog with owner" style="width:100%"> 
         </div> 
-
+<!-- temporary font for selection/replacement (roboto, source sans pro, source serif pro)-->
         <div class="container p-2">
-            <p class="ourstorydesc" style= "font-family: Verdana, Geneva, Tahoma, sans-serif;" text-align: center font-size:20%;>
+            <p class="ourstorydesc" style= "font-family: Roboto Condensed;" text-align: center font-size:20%;>
             Pawfect Match is a team of passionate animal lovers dedicated to helping pets find their forever homes. 
             Our mission is to provide a platform that connects adoptable pets with loving families who are 
             committed to providing them with a safe and nurturing environment.
@@ -43,7 +45,7 @@
         </div>
 
        <div class="container p-2">
-        <p class="ourstorydesc" style= "font-family: Verdana, Geneva, Tahoma, sans-serif;" text-align: center font-size:20%;>
+       <p class="ourstorydesc" style= "font-family: Source Serif Pro;" text-align: center font-size:20%;>
             At our core, we believe that getting a pet not only enriches your life but also the life of the 
             animal you are adopting. We are grateful to be a part of the trip that pets take us on as they bring happiness, love, and friendship 
             into our lives. We appreciate you considering adoption, and we genuinely hope that our website can assist you in finding your Pawfect Match.
@@ -51,7 +53,17 @@
         </div>
     </div>
 </div>
-       
+
+       <br>       
+<!--unfinished next part-->
+<img alt="our vision and mission" class ="center" src="https://d339b5nop2tkmp.cloudfront.net/uploads/pictures/1768/content_vision-tile-about-us-page-.jpg"  width="450px" height = "400px";> </div>
+
+<h3> Our vision and mission</h3>
+
+<p> 
+We have a vision of a future for Australia where every pet is safe, respected and loved. And to get us there,
+we’ve developed a mission that looks at the bigger picture, drives social change and unites to save lives. 
+</p>
 
 <!--footer-->
 <?php require_once "../components/footer.php"; ?>
