@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Source+Sans+Pro&family=Source+Serif+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&family=Source+Sans+Pro&family=Source+Serif+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
       <img src="img/paw.png" alt="paw logo" width="250" height="250">
     </div>
 
-    <h1 style="text-align: left;"> About Us </h1>
+<br><br>
 
     <div class="container px-5" id="OurStory">
       <div class="row gx-5 align-items-center">
@@ -39,7 +39,7 @@
         
 <!-- temporary font for selection/replacement (roboto, source sans pro, source serif pro)-->
         <div class="container p-2">
-            <p class="ourstorydesc" style= "font-family: Roboto Condensed;" text-align: center font-size:20%;>
+            <p class="ourstorydesc" style= "font-family: Open Sans;" text-align: center font-size:20%;>
             Pawfect Match is a team of passionate animal lovers dedicated to helping pets find their forever homes. 
             Our mission is to provide a platform that connects adoptable pets with loving families who are 
             committed to providing them with a safe and nurturing environment.
@@ -47,7 +47,7 @@
         </div>
 
        <div class="container p-2">
-       <p class="ourstorydesc" style= "font-family: Source Serif Pro;" text-align: center font-size:20%;>
+       <p class="ourstorydesc" style= "font-family: Open Sans;" text-align: center font-size:20%;>
             At our core, we believe that getting a pet not only enriches your life but also the life of the 
             animal you are adopting. We are grateful to be a part of the trip that pets take us on as they bring happiness, love, and friendship 
             into our lives. We appreciate you considering adoption, and we genuinely hope that our website can assist you in finding your Pawfect Match.
@@ -56,7 +56,7 @@
     </div>
 </div>
 
-<br><br><br>
+<br><br>
 
 <!--unfinished next part-->
 
@@ -75,23 +75,24 @@
 <div class="clearfix"></div>
 -->
 
-<h2 style= "font-family: Roboto Condensed;" text-align: center>Placeholder</h2>
+<h2 style= "font-family: Source Serif Pro;" text-align: center>Know more about us!</h2>
 <br>
 <table cellspacing="10">
     <tr>
         <td>
              <div class="responsive">
              <div class="gallery">
-             <img src="../home/img/pm-banner3.png" alt="Cinque Terre" width="600" height="400">
-            <div class="desc">Add a description of the image here   </div>
+             <img src="../home/img/PM-ourstory1.png" alt="Vision Mission img" width="600" height="400">
+            <div class="desc"> Vision-Mission  </div>
         </td>
       
     <td>    
-        <p style= "font-family: Roboto Condensed;" text-align: center>
-          How many times were you frustrated while looking
-          out for a good collection of programming/
-          algorithm/ interview questions? What did you
-          expect and what did you get?
+       <p style= "font-family: Roboto Condensed; text-align: center">
+          Our Vision and Mission is to bring about a world where every pet has a loving and long-term home,  
+          where people embrace the companionship, and happiness that pets bring into their lives, and where 
+           the welfare of animals is given utmost care and priority.
+
+
         </p>
   
       </td>
@@ -105,16 +106,18 @@
       <td>
         <div class="responsive">
             <div class="gallery">
-            <img src="../home/img/pm-banner4.png" alt="Cinque Terre" width="600" height="400">
-            <div class="desc">Add a description of the image here</div>
+            <img src="../home/img/PM-ourstory2.png" alt="Our Team img" width="600" height="400">
+            <div class="desc">Our Team</div>
       </td>
      <td>
           
-         <p style= "font-family: Roboto Condensed;" text-align: center>
-             How many times were you frustrated while looking
-             out for a good collection of programming/
-             algorithm/ interview questions? What did you
-             expect and what did you get?
+        <p style= "font-family: Roboto Condensed; text-align: center">
+            Our Team is driven by strong passion and dedication, committed to to helping all animals in need find homes. 
+            We work tirelessly to spread awareness in the neighborhood about ethical pet ownership, including the value 
+            of routine veterinarian care, spaying and neutering, and good nutrition. For all the animals in our care, we 
+            offer a secure, hygienic, and loving environment. We also make every effort to place each pet with the ideal 
+            adoptive home. We stand up for animal welfare because we think every creature deserves a second shot and until 
+            our ultimate goal comes true.
         </p>
   
       </td>
@@ -123,21 +126,20 @@
 
 <div class="clearfix"> </div>
 
-  <table cellspacing="10">
+  <table cellspacing="5">
     <tr>
       <td>
       <div class="responsive">
             <div class="gallery">
-            <img src="../home/img/pm-banner3.png" alt="Cinque Terre" width="600" height="400">
-            <div class="desc">Add a description of the image here</div>
+            <img src="../home/img/PM-ourstory3.png" alt="Support Us img" width="600" height="400">
+            <div class="desc">Support Us</div>
       </td>
+      
      <td>
-          
-        <p style= "font-family: Roboto Condensed;" text-align: center>
-          How many times were you frustrated while looking
-          out for a good collection of programming/
-          algorithm/ interview questions? What did you
-          expect and what did you get?
+        <p style= "font-family: Roboto Condensed; text-align: center">
+         Pawfect Match is in constant need of your support, whether it's through volunteerism, monetary, in kind or by simply spreading the word. 
+         We aim to raise funds keep our furbabies happy and healthy.
+        Thank you again for your support! Together, we believe we can all make a difference in the lives of animals in need!
         </p>
   
       </td>
@@ -148,16 +150,24 @@
 
 <h3 style="text-align: center">
     <b> <span style="color:#68b403;">
-        "Lorem ipsum lorem ipsum lorem ipsum"
+        You may follow and contact us through our social media below!
     </span>
 </b>
 
 <br>
 
-<!--Social Media hyperlink-->
+<!--Social Media hyperlinks TWITTER AND IG NALANG KULANG hehe--> 
+         
+         <a href="https://www.facebook.com/profile.php?id=100092277728501"><span style="color:#0165E1"> 
+        Facebook </span></a> 
+        
+          <a href="https:///www.youtube.com"> <span style="color:#962fbf">
+        Instagram </a>
+        
+        <a href="https:///www.youtube.com"> <span style="color:#17A9FD">
+        & Twitter </a>
 
-<a href="https://www.facebook.com/profile.php?id=100092277728501"><span style="color:#09694c;"> 
-Follow us and&nbsp;keep updated!</span></a>
+<a href="https://www.facebook.com/profile.php?id=100092277728501"><span style="color:#09694c;"> </span></a>
 
 
 <!--
