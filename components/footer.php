@@ -10,7 +10,9 @@
             <div class="footer-col">
                 <h4>About Us</h4>
                 <p class="about">
-                    Pawfect Match
+                At our core, we believe that getting a pet not only enriches your life but also 
+                the life of the animal you are adopting. We appreciate you considering adoption, 
+                and we genuinely hope that our website can assist you in finding your Pawfect Match.
                 </p>
             </div>
             <div class="footer-col">
