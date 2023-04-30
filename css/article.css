@@ -26,31 +26,32 @@ body {
     margin-left: 50px;
 }
 
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px !important;
+}
+
 .radio-switch {
     background-color: #2a4d50;
     border-radius: 9999px;
     display: inline-flex;
     padding: 0.25rem;
+    margin: 0.3rem;
+    float: right;
 }
 
 .radio-switch__label {
     border-radius: 9999px;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
-	float: right;
+
 }
 
 .radio-switch__label--selected {
-    /* For selected radio only */
-    background-color: #BB6b24;
+    background-color: #f19c24;
     color: #fff;
 }
 
 .radio-switch__input {
     display: none;
-}
-
-p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
 }

@@ -52,6 +52,31 @@ body {
   padding-right: 50px;
 }
 
+.radio-switch {
+  background-color: #2a4d50;
+  border-radius: 9999px;
+  display: inline-flex;
+  padding: 0.25rem;
+  margin: 0.3rem;
+  float: right;
+}
+
+.radio-switch__label {
+  border-radius: 9999px;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+
+}
+
+.radio-switch__label--selected {
+  background-color: #f19c24;
+  color: #fff;
+}
+
+.radio-switch__input {
+  display: none;
+}
+
 .card.card-right, .card.card-left, .card.card-a{
   background-color: transparent;
   border: none;

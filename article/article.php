@@ -102,15 +102,30 @@
 
     <div class="radio-switch">
         <label class="radio-switch__label radio-switch__label--selected">
-        <input type="radio" class="radio-switch__input" name="page" value="article.php" checked />
+        <input type="radio" class="radio-switch__input" id="toggleBtn" />
         Article
         </label>
-        <input type="radio" class="radio-switch__input" name="page" value="video.php" />
         Video
     </div>
 
 <!--footer-->
 <?php require_once "../components/footer.php"; ?>
+
+<script>
+    function togglePages() {
+  var currentPage = window.location.pathname;
+  if (currentPage == '/2itg_Grp6_Pawfect-Match/article/article.php') {
+    window.location.href = '/2itg_Grp6_Pawfect-Match/article/video.php';
+  } else {
+    window.location.href = '/2itg_Grp6_Pawfect-Match/article/article.php';
+  }
+}
+
+var toggleBtn = document.getElementById('toggleBtn');
+toggleBtn.addEventListener('click', togglePages);
+</script>
+
+
 </body>
 
 </html>
