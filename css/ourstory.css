@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&family=Source+Sans+Pro&family=Source+Serif+Pro:ital,wght@1,600&display=swap');
 *{
     margin: 0;
-    padding: 0;
+    padding: 0; 
     box-sizing: border-box;
 }
 
@@ -86,7 +86,7 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
-  font-family: Source serif pro;
+  font-family:  pro;
   color:black
 }
 
