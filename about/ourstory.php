@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&family=Source+Sans+Pro&family=Source+Serif+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
 
@@ -75,7 +74,7 @@
 <div class="clearfix"></div>
 -->
 
-<h2 style= "font-family: Source Serif Pro;" text-align: center>Know more about us!</h2>
+<h2 style= "font-family: Open Sans;" text-align: center>Know more about us!</h2>
 <br>
 <table cellspacing="10">
     <tr>
@@ -87,7 +86,7 @@
         </td>
       
     <td>    
-       <p style= "font-family: Roboto Condensed; text-align: center">
+       <p style= "font-family: Open Sans; text-align: center">
           Our Vision and Mission is to bring about a world where every pet has a loving and long-term home,  
           where people embrace the companionship, and happiness that pets bring into their lives, and where 
            the welfare of animals is given utmost care and priority.
@@ -111,7 +110,7 @@
       </td>
      <td>
           
-        <p style= "font-family: Roboto Condensed; text-align: center">
+        <p style= "font-family: Open Sans; text-align: center" >
             Our Team is driven by strong passion and dedication, committed to to helping all animals in need find homes. 
             We work tirelessly to spread awareness in the neighborhood about ethical pet ownership, including the value 
             of routine veterinarian care, spaying and neutering, and good nutrition. For all the animals in our care, we 
@@ -136,7 +135,7 @@
       </td>
       
      <td>
-        <p style= "font-family: Roboto Condensed; text-align: center">
+        <p style= "font-family: Open Sans; text-align: center">
          Pawfect Match is in constant need of your support, whether it's through volunteerism, monetary, in kind or by simply spreading the word. 
          We aim to raise funds keep our furbabies happy and healthy.
         Thank you again for your support! Together, we believe we can all make a difference in the lives of animals in need!
@@ -156,7 +155,7 @@
 
 <br>
 
-<!--Social Media hyperlinks TWITTER AND IG NALANG KULANG hehe--> 
+<!--Social Media hyperlinks TWITTER AND IG NALANG KULANG & ILILIPAT KO PO TO SOMEWHERE HIHI SAYANG KASI hehe--> 
          
          <a href="https://www.facebook.com/profile.php?id=100092277728501"><span style="color:#0165E1"> 
         Facebook </span></a> 
