@@ -26,8 +26,6 @@
       <img src="img/paw.png" alt="paw logo" width="250" height="250">
     </div>
 
-<br><br>
-
     <div class="container px-5" id="OurStory">
       <div class="row gx-5 align-items-center">
         <div class="col-lg-12">
@@ -73,7 +71,7 @@
 
 <div class="clearfix"></div>
 -->
-
+<br><br><br><br>
 <h2 style= "font-family: Open Sans;" text-align: center>Know more about us!</h2>
 <br>
 <table cellspacing="10">
