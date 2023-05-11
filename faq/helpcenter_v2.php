@@ -4,7 +4,6 @@
     <title>Pawfect Match FAQ</title>
     <style>
         body {
-            background-color: #FEDBD0;
             font-family: Arial, sans-serif;
         }
         h1 {

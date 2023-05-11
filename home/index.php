@@ -113,6 +113,7 @@
         <img src="../home/img/PM-ourstory1.png" alt="PM-banner"/>
       </p>
 </div>
+<?php include "../faq/helpcenter_v2.php"; ?>
 
     <?php require_once "../components/footer.php"; ?>
 </body>
