@@ -25,8 +25,8 @@
                 <h4>follow us</h4>
                 <div class="social-links">
                     <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0HmX1jyhrrswiTaVwnpranrkCSg5jU22DPukiJDSyXfAeSUZXTqK9zuJ5EJsisdA4l&id=100090756704795"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/ARKphOfficial/status/1632250740302397441/photo/1"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/p/CpZTsQoBAJJ/?utm_source=ig_web_copy_link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Pawfect__Match"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/pawfect__match/?igshid=NTc4MTIwNjQ2YQ=="><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 

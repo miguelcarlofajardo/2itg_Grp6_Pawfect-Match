@@ -82,16 +82,13 @@
              <img src="../home/img/PM-ourstory1.png" alt="Vision Mission img" width="600" height="400">
             <div class="desc"> Vision-Mission  </div>
         </td>
-      
+  <br>
     <td>    
        <p style= "font-family: Open Sans; text-align: center">
           Our Vision and Mission is to bring about a world where every pet has a loving and long-term home,  
           where people embrace the companionship, and happiness that pets bring into their lives, and where 
            the welfare of animals is given utmost care and priority.
-
-
         </p>
-  
       </td>
     </tr>
   </table>
@@ -106,8 +103,8 @@
             <img src="../home/img/PM-ourstory2.png" alt="Our Team img" width="600" height="400">
             <div class="desc">Our Team</div>
       </td>
+<br>
      <td>
-          
         <p style= "font-family: Open Sans; text-align: center" >
             Our Team is driven by strong passion and dedication, committed to to helping all animals in need find homes. 
             We work tirelessly to spread awareness in the neighborhood about ethical pet ownership, including the value 
@@ -120,13 +117,13 @@
       </td>
     </tr>
   </table>
+<br>
+  <div class="clearfix"> </div>
 
-<div class="clearfix"> </div>
-
-  <table cellspacing="5">
-    <tr>
-      <td>
-      <div class="responsive">
+    <table cellspacing="5">
+      <tr>
+        <td>
+         <div class="responsive">
             <div class="gallery">
             <img src="../home/img/PM-ourstory3.png" alt="Support Us img" width="600" height="400">
             <div class="desc">Support Us</div>
@@ -145,6 +142,7 @@
 
 <br><br>
 
+<!-- Header for Social Media Hyperlinks
 <h3 style="text-align: center">
     <b> <span style="color:#68b403;">
         You may follow and contact us through our social media below!
@@ -152,10 +150,11 @@
 </b>
 
 <br>
+-->
 
 <!--Social Media hyperlinks TWITTER AND IG NALANG KULANG & ILILIPAT KO PO TO SOMEWHERE HIHI SAYANG KASI hehe--> 
-         
-         <a href="https://www.facebook.com/profile.php?id=100092277728501"><span style="color:#0165E1"> 
+<!--I'll just hide this code hekhek, I intend to reuse this next time :) -Leo - 5/11/2023 -->         
+   <!--      <a href="https://www.facebook.com/profile.php?id=100092277728501"><span style="color:#0165E1"> 
         Facebook </span></a> 
         
           <a href="https:///www.youtube.com"> <span style="color:#962fbf">
@@ -165,7 +164,7 @@
         & Twitter </a>
 
 <a href="https://www.facebook.com/profile.php?id=100092277728501"><span style="color:#09694c;"> </span></a>
-
+-->
 
 <!--
      <img src= "../home/img/pm-banner1.png" alt="our vision and mission" class ="center"   width="450px" height = "400px";> </div>
