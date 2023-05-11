@@ -31,7 +31,7 @@
 </head>
 <body>
     <?php require_once "../components/navbar.php"; ?>
-    <br><br><br><br>
+    <br><br><br>
 
 <!--Carousel-->
 <!--These are the small clickable rectangles/indicators below the images-->
@@ -87,7 +87,7 @@
     </div> 
   </div>
 <br><br>
-<h1 style=" text-align: center;"> Reasons to Adopt than to Shop </h1> 
+<h1 style=" text-align: center;"> Why Adopt than Shop? </h1> 
   <div class="section">
     <div class="text">
       <h4> You're Saving a Life </h4>
@@ -97,20 +97,26 @@
                or rescued from neglectful or abusive situations. By adopting, you're not only providing a home for a pet, 
              but you're also helping to reduce the number of animals that are euthanized in shelters each year.
           </div>
-        <img src="../home/img/PM-ourstory1.png" alt="PM-banner"/>
+        <img src="../home/img/adopt-pets1.jpeg" alt="PM-banner"/>
       </p>
 </div>
 
 <div class="section">
     <div class="text">
-      <h4> You're Saving a Life </h4>
-        <p>
-            When you adopt a pet from a shelter or rescue organization, you're giving a second chance to 
-               an animal that might not have one otherwise. Many of these animals have been abandoned, surrendered, 
-               or rescued from neglectful or abusive situations. By adopting, you're not only providing a home for a pet, 
-             but you're also helping to reduce the number of animals that are euthanized in shelters each year.
-          </div>
-        <img src="../home/img/PM-ourstory1.png" alt="PM-banner"/>
+      <h4> It's Cheaper! </h4>
+      <p  style= "font-family: Sans Serif;" text-align: center font-size:10%;>
+         Adopting a pet from a shelter or rescue organization is often much cheaper than buying a pet from a breeder or pet store. Adoption fees usually cover the cost of spaying or neutering, vaccinations, and other medical expenses that the animal may have incurred while in the shelter.   </div>
+        <img src="../home/img/adopt-pets7.png" alt="PM-banner"/>
+      </p>
+</div>
+
+<div class="section">
+    <div class="text">
+      <h4> It's for a Good Cause </h4>
+        <p  style= "font-family: Sans Serif;" text-align: center font-size:10%;>
+        You are supporting a non-profit organization that is committed to aiding animals in need when you adopt a pet from a shelter or rescue group. Operations of many of these organizations are supported by donations and volunteers.
+        </div>
+        <img src="../home/img/adopt-pets5.png" alt="PM-banner"/>
       </p>
 </div>
 
