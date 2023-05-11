@@ -84,7 +84,7 @@
         </td>
   <br>
     <td>    
-       <p style= "font-family: Open Sans; text-align: center">
+       <p style = "color:rgb(204, 98, 6); font-family: Open Sans; text-align: center">
           Our Vision and Mission is to bring about a world where every pet has a loving and long-term home,  
           where people embrace the companionship, and happiness that pets bring into their lives, and where 
            the welfare of animals is given utmost care and priority.
@@ -105,7 +105,7 @@
       </td>
 <br>
      <td>
-        <p style= "font-family: Open Sans; text-align: center" >
+        <p style= "color:rgb(204, 98, 6); font-family: Open Sans; text-align: center" >
             Our Team is driven by strong passion and dedication, committed to to helping all animals in need find homes. 
             We work tirelessly to spread awareness in the neighborhood about ethical pet ownership, including the value 
             of routine veterinarian care, spaying and neutering, and good nutrition. For all the animals in our care, we 
@@ -130,7 +130,7 @@
       </td>
       
      <td>
-        <p style= "font-family: Open Sans; text-align: center">
+        <p style= "color:rgb(204, 98, 6); font-family: Open Sans; text-align: center">
          Pawfect Match is in constant need of your support, whether it's through volunteerism, monetary, in kind or by simply spreading the word. 
          We aim to raise funds keep our furbabies happy and healthy.
         Thank you again for your support! Together, we believe we can all make a difference in the lives of animals in need!

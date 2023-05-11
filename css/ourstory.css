@@ -34,6 +34,9 @@ body{
 
   }
 
+  .desc{
+    color:#f19c24
+  }
 
   .gallery1{
     display: block;
@@ -86,7 +89,7 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
-  font-family:  pro;
+  font-family:  sans-serif;
   color:black
 }
 
