@@ -30,6 +30,16 @@
 <section id="videos" class="section-padding">
     <br></br>
 
+    
+    <div class="radio-switch">
+        <label class="radio-switch__label radio-switch__label--selected">
+        <input type="radio" class="radio-switch__input" id="toggleBtn" />
+        Video
+        </label>
+        Article
+    </div>
+
+
     <div class="col-12 text-center">
         <h1> How to take care of your new pet? </h1>
         <h2>Videos</h2>
@@ -116,16 +126,6 @@
             </div>
         </div>
     </div>
-
-
-    <div class="radio-switch">
-        <label class="radio-switch__label radio-switch__label--selected">
-        <input type="radio" class="radio-switch__input" id="toggleBtn" />
-        Video
-        </label>
-        Article
-    </div>
-
 
 
 <!--footer-->

@@ -27,6 +27,15 @@
 
 <!--body-->
 <section id="articles" class="section-padding">
+    <div class="radio-switch">
+        <label class="radio-switch__label radio-switch__label--selected">
+        <input type="radio" class="radio-switch__input" id="toggleBtn" />
+        Article
+        </label>
+        Video
+    </div>
+
+
     <div class="col-12 text-center">
         <h1> How to take care of your new pet? </h1>
         <h2>Articles</h2>
@@ -99,14 +108,6 @@
                 </div>
             </div>
         </div>
-
-    <div class="radio-switch">
-        <label class="radio-switch__label radio-switch__label--selected">
-        <input type="radio" class="radio-switch__input" id="toggleBtn" />
-        Article
-        </label>
-        Video
-    </div>
 
 <!--footer-->
 <?php require_once "../components/footer.php"; ?>
