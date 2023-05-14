@@ -11,8 +11,8 @@
             <li><a href="../about/ourstory.php">Our Story</a></li>
             <li><a href="../gallery/petlist.php">Meet Your Furbaby</a></li>
             <li><a href="../article/article.php">Help</a></li>
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
-                Sign up
+            <button onclick="redirectToProfile()" style="width:auto;">
+                Profile
                 <div class="arrow-wrapper">
                     <div class="arrow"></div>
                 </div>
@@ -20,5 +20,9 @@
         </ul>
 
         <div class="bx bx-menu" id="menu-icon"></div>
-        <div><?php require_once '../forms/signup.php'?></div>
+<script>
+function redirectToProfile() {
+    window.location.href = "../profile/logindex.php";
+}
+</script>
 </header>
