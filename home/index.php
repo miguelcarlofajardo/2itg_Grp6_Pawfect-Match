@@ -119,7 +119,7 @@
         <img src="../home/img/adopt-pets5.png" alt="PM-banner"/>
       </p>
 </div>
-<?php include "../faq/helpcenter_v2.php"; ?>
+<?php include "../faq/helpcenter_V3.php"; ?>
 
     <?php require_once "../components/footer.php"; ?>
 </body>
