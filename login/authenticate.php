@@ -39,11 +39,15 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             exit;
         } else {
             // Incorrect password
-            echo 'Incorrect username and/or password!';
+            echo '<script>alert("Incorrect username and/or password!");</script>';
+            echo '<script>window.location.href = "../profile/logindex.php";</script>';
+            exit;
         }
     } else {
         // Incorrect username
-        echo 'Incorrect username and/or password!';
+        echo '<script>alert("Incorrect username and/or password!");</script>';
+        echo '<script>window.location.href = "../profile/logindex.php";</script>';
+        exit;
     }
     $stmt->close();
 }

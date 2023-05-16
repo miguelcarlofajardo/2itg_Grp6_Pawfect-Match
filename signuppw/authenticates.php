@@ -14,8 +14,10 @@ if (mysqli_connect_errno()) {
 }
 
 if (!isset($_POST['username'], $_POST['email'], $_POST['password'])) {
-    // Could not get the data that should have been sent.
-    exit('Please fill all the required fields!');
+    echo '<script>alert("Please fill all the required fields!");</script>';
+    // Redirect to login page
+    echo '<script>window.location.href = "../profile/signup.php";</script>';
+    exit;
 }
 
 // Trim whitespace from the inputs
@@ -25,7 +27,10 @@ $password = $_POST['password'];
 
 // Check if any of the required fields are empty
 if (empty($username) || empty($email) || empty($password)) {
-    exit('Please fill all the required fields!');
+    echo '<script>alert("Please fill all the required fields!");</script>';
+    // Redirect to login page
+    echo '<script>window.location.href = "../profile/signup.php";</script>';
+    exit;
 }
 
 // Prepare our SQL statement to check if the username already exists.
@@ -35,8 +40,11 @@ if ($stmt = $con->prepare('SELECT id FROM accounts WHERE username = ?')) {
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-        // Username already exists.
-        echo 'Username already exists, please choose a different one.';
+        // Display alert message
+        echo '<script>alert("Username already exists, please choose a different one.");</script>';
+        // Redirect to login page
+        echo '<script>window.location.href = "../profile/signup.php";</script>';
+        exit;
     } else {
         // Username is available, proceed with creating the new account.
         // Prepare an SQL statement to insert the new account into the database.
@@ -48,7 +56,6 @@ if ($stmt = $con->prepare('SELECT id FROM accounts WHERE username = ?')) {
             $stmt->execute();
             // Display alert message
             echo '<script>alert("Sign Up successful!");</script>';
-
             // Redirect to login page
             echo '<script>window.location.href = "../profile/logindex.php";</script>';
             exit;
