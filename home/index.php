@@ -92,9 +92,8 @@
     <div class="text">
       <h4> You're Saving a Life </h4>
         <p  style= "font-family: Sans Serif;" text-align: center font-size:10%;>
-            When you adopt a pet from a shelter or rescue organization, you're giving a second chance to 
-               an animal that might not have one otherwise. Many of these animals have been abandoned, surrendered, 
-               or rescued from neglectful or abusive situations. By adopting, you're not only providing a home for a pet, 
+            When you adopt, you're giving them a second chance. Most of these angels have been abandoned, surrendered, 
+               or rescued from unfortuante situations. You're also not only providing a home for a pet, 
              but you're also helping to reduce the number of animals that are euthanized in shelters each year.
           </div>
         <img src="../home/img/adopt-pets1.jpeg" alt="PM-banner"/>
@@ -119,6 +118,8 @@
         <img src="../home/img/adopt-pets5.png" alt="PM-banner"/>
       </p>
 </div>
+
+<!--FAQ part-->
 <?php include "../faq/helpcenter_V3.php"; ?>
 
     <?php require_once "../components/footer.php"; ?>
