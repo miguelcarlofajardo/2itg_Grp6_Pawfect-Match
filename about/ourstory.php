@@ -29,7 +29,7 @@
     <div class="container px-5" id="OurStory">
       <div class="row gx-5 align-items-center">
         <div class="col-lg-12">
-            <br><br>
+            <br><br><br><br>
             <h1 style=" text-align: center;"> Find Your Pawfect Match! </h1> 
             <img src="../home/img/adoptdog.jpeg" alt = "Dog with owner" style="width:100%"> 
         </div> 
@@ -71,7 +71,7 @@
 
 <div class="clearfix"></div>
 -->
-<br><br><br><br>
+<br><br><br>
 <h2 style= "font-family: Open Sans;" text-align: center>Know more about us!</h2>
 <br>
 <table cellspacing="10">
