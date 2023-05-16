@@ -20,12 +20,6 @@
             <li><a href="../about/ourstory.php">Our Story</a></li>
             <li><a href="../gallery/petlist.php">Meet Your Furbaby</a></li>
             <li><a href="../article/article.php">Help</a></li>
-            <button class="profile" onclick="redirectToHome()" style="width:auto;">
-                Profile
-                <div class="arrow-wrapper">
-                    <div class="arrow"></div>
-                </div>
-            </button>
         </ul>
 
         <div class="bx bx-menu" id="menu-icon"></div>
@@ -60,9 +54,9 @@
             </div>
             <div class="btn">
                 <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                <button class="button2" onclick="redirectToLogin()">Login</button>
+                <button class="button2" onclick="redirectToLogin()" type="button">Login</button>
             </div>
-                <button class="button3">Forgot Password</button>
+                <button class="button3" onclick="redirectToHome()" type="button">Cancel</button>
     </form>
     </div>
 
@@ -71,7 +65,7 @@ function redirectToHome() {
     window.location.href = "../home/index.php";
 }
 function redirectToLogin() {
-    window.location.href = "../profile/logindex.php";
+        window.location.href = "../profile/logindex.php";
 }
 </script>
 </body>

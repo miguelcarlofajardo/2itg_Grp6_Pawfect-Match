@@ -46,7 +46,12 @@ if ($stmt = $con->prepare('SELECT id FROM accounts WHERE username = ?')) {
             // Bind parameters (s = string).
             $stmt->bind_param('sss', $_POST['username'], $_POST['email'], $hashed_password);
             $stmt->execute();
-            echo 'Sign-up successful! You can now log in.';
+            // Display alert message
+            echo '<script>alert("Sign Up successful!");</script>';
+
+            // Redirect to login page
+            echo '<script>window.location.href = "../profile/logindex.php";</script>';
+            exit;
         } else {
             // Something went wrong with the database insert.
             echo 'Could not prepare statement!';
