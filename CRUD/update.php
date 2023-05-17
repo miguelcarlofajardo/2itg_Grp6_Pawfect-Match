@@ -3,14 +3,11 @@
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$name = $breed = $age = $sex = $color = $weight = $pet = $owner = "";
-$name_err = $breed_err = $age_err = $sex_err = $color_err = $weight_err = $pet_err = $owner_err = "";
+$name = $breed = $age = $sex = $color = $weight = $pet = $owner = $image = "";
+$name_err = $breed_err = $age_err = $sex_err = $color_err = $weight_err = $pet_err = $owner_err = $image_err = "";
 
 // Processing form data when form is submitted
-if (isset($_POST["id"]) && !empty($_POST["id"])) {
-    // Get hidden input value
-    $id = $_POST["id"];
-
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate name
     $input_name = trim($_POST["name"]);
     if (empty($input_name)) {
@@ -39,15 +36,14 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
         $age = $input_age;
     }
 
-     // Validate sex
-     $input_sex = trim($_POST["sex"]);
-     if (empty($input_sex)) {
-         $sex_err = "Please enter sex.";
-     } else {
-         $sex = $input_sex;
-     }
+    // Validate sex
+    $input_sex = trim($_POST["sex"]);
+    if (empty($input_sex)) {
+        $sex_err = "Please enter sex.";
+    } else {
+        $sex = $input_sex;
+    }
 
-     
     // Validate color
     $input_color = trim($_POST["color"]);
     if (empty($input_color)) {
@@ -56,50 +52,79 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
         $color = $input_color;
     }
 
-   // Validate weight
-   $input_weight = trim($_POST["weight"]);
-   if (empty($input_weight)) {
-       $weight_err = "Please enter the weight.";
-   } elseif (!ctype_digit($input_weight)) {
-       $weight_err = "Please enter a positive integer value.";
-   } else {
-       $weight = $input_weight;
-   }
+    // Validate weight
+    $input_weight = trim($_POST["weight"]);
+    if (empty($input_weight)) {
+        $weight_err = "Please enter the weight.";
+    } elseif (!ctype_digit($input_weight)) {
+        $weight_err = "Please enter a positive integer value.";
+    } else {
+        $weight = $input_weight;
+    }
 
-   // Validate pet information
-   $input_pet = trim($_POST["pet"]);
-   if (empty($input_pet)) {
-       $pet_err = "Please enter pet information.";
-   } else {
-       $pet = $input_pet;
-   }
+    // Validate pet information
+    $input_pet = trim($_POST["pet"]);
+    if (empty($input_pet)) {
+        $pet_err = "Please enter pet information.";
+    } else {
+        $pet = $input_pet;
+    }
 
-   // Validate owner information
-   $input_owner = trim($_POST["owner"]);
-   if (empty($input_owner)) {
-       $owner_err = "Please enter owner information.";
-   } else {
-       $owner = $input_owner;
-   }
+    // Validate owner information
+    $input_owner = trim($_POST["owner"]);
+    if (empty($input_owner)) {
+        $owner_err = "Please enter owner information.";
+    } else {
+        $owner = $input_owner;
+    }
+
+    // Validate and process image upload
+    if (!empty($_FILES["image"]["name"])) {
+        $target_dir = "uploads/";
+        $target_file = $target_dir . basename($_FILES["image"]["name"]);
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        // Check if the file is a valid image
+        $check = getimagesize($_FILES["image"]["tmp_name"]);
+        if ($check !== false) {
+            // Check file size
+            if ($_FILES["image"]["size"] > 500000) {
+                $image_err = "Sorry, your file is too large.";
+            } else {
+                // Generate a unique filename to avoid conflicts
+                $image = uniqid() . '.' . $imageFileType;
+
+                // Move the uploaded file to the target directory
+                if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_dir . $image)) {
+                    // File upload successful
+                } else {
+                    $image_err = "Sorry, there was an error uploading your file.";
+                }
+            }
+        } else {
+            $image_err = "File is not an image.";
+        }
+    }
 
     // Check input errors before inserting in database
-    if (empty($name_err) && empty($breed_err) && empty($age_err)&& empty($sex_err) &&  empty($color_err) &&  empty($weight_err) && empty($pet_err) && empty($owner_err)) {
+    if (empty($name_err) && empty($breed_err) && empty($age_err) && empty($sex_err) && empty($color_err) && empty($weight_err) && empty($pet_err) && empty($owner_err) && empty($image_err)) {
         // Prepare an insert statement
-        $sql = "INSERT INTO information (name, breed, age, sex, color, weight, pet, owner) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO information (name, breed, age, sex, color, weight, pet, owner, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         if ($stmt = $mysqli->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("sss", $param_name, $param_breed, $param_age, $param_sex, $param_color, $param_weight, $param_pet, $param_owner);
+            $stmt->bind_param("sssssssss", $param_name, $param_breed, $param_age, $param_sex, $param_color, $param_weight, $param_pet, $param_owner, $param_image);
 
             // Set parameters
             $param_name = $name;
             $param_breed = $breed;
             $param_age = $age;
-            $param_sex= $sex;
+            $param_sex = $sex;
             $param_color = $color;
             $param_weight = $weight;
             $param_pet = $pet;
             $param_owner = $owner;
+            $param_image = $image;
 
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
@@ -117,60 +142,6 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
 
     // Close connection
     $mysqli->close();
-
-} else {
-    // Check existence of id parameter before processing further
-    if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
-        // Get URL parameter
-        $id =  trim($_GET["id"]);
-
-        // Prepare a select statement
-        $sql = "SELECT * FROM information WHERE id = ?";
-        if ($stmt = $mysqli->prepare($sql)) {
-            // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("i", $param_id);
-
-            // Set parameters
-            $param_id = $id;
-
-            // Attempt to execute the prepared statement
-            if ($stmt->execute()) {
-                $result = $stmt->get_result();
-
-                if ($result->num_rows == 1) {
-                    /* Fetch result row as an associative array. Since the result set
-                    contains only one row, we don't need to use while loop */
-                    $row = $result->fetch_array(MYSQLI_ASSOC);
-
-                    // Retrieve individual field value
-                    $name = $row["name"];
-                    $breed = $row["breed"];
-                    $age = $row["age"];
-                    $sex= $row["sex"];
-                    $color = $row["color"];
-                    $weight = $row["weight"];
-                    $pet = $row["pet"];
-                    $owner = $row["owner"];
-                } else {
-                    // URL doesn't contain valid id. Redirect to error page
-                    header("location: error.php");
-                    exit();
-                }
-            } else {
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-        }
-
-        // Close statement
-        $stmt->close();
-
-        // Close connection
-        $mysqli->close();
-    } else {
-        // URL doesn't contain id parameter. Redirect to error page
-        header("location: error.php");
-        exit();
-    }
 }
 ?>
 
@@ -236,6 +207,10 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
                             <label>Owner Information</label>
                             <input type="text" name="owner" class="form-control <?php echo (!empty($owner_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $owner; ?>">
                             <span class="invalid-feedback"><?php echo $owner_err; ?></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Image</label>
+                            <input type="file" name="image" class="form-control-file">
                         </div>
 
                         <input type="submit" class="btn btn-primary" value="Submit">

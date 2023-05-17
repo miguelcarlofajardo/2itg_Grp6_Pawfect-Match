@@ -4,7 +4,7 @@ require_once "config.php";
 
 // Define variables and initialize with empty values
 $name = $breed = $age = $sex = $color = $weight = $pet = $owner = "";
-$name_err = $breed_err = $age_err = $sex_err = $color_err = $weight_err = $pet_err = $owner_err = "";
+$name_err = $breed_err = $age_err = $sex_err = $color_err = $weight_err = $pet_err = $owner_err = $image_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -36,15 +36,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $age = $input_age;
     }
 
-     // Validate sex
-     $input_sex = trim($_POST["sex"]);
-     if (empty($input_sex)) {
-         $sex_err = "Please enter sex.";
-     } else {
-         $sex = $input_sex;
-     }
+    // Validate sex
+    $input_sex = trim($_POST["sex"]);
+    if (empty($input_sex)) {
+        $sex_err = "Please enter sex.";
+    } else {
+        $sex = $input_sex;
+    }
 
-     
     // Validate color
     $input_color = trim($_POST["color"]);
     if (empty($input_color)) {
@@ -53,55 +52,74 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $color = $input_color;
     }
 
-   // Validate weight
-   $input_weight = trim($_POST["weight"]);
-   if (empty($input_weight)) {
-       $weight_err = "Please enter the weight.";
-   } elseif (!ctype_digit($input_weight)) {
-       $weight_err = "Please enter a positive integer value.";
-   } else {
-       $weight = $input_weight;
-   }
+    // Validate weight
+    $input_weight = trim($_POST["weight"]);
+    if (empty($input_weight)) {
+        $weight_err = "Please enter the weight.";
+    } elseif (!ctype_digit($input_weight)) {
+        $weight_err = "Please enter a positive integer value.";
+    } else {
+        $weight = $input_weight;
+    }
 
-   // Validate pet information
-   $input_pet = trim($_POST["pet"]);
-   if (empty($input_pet)) {
-       $pet_err = "Please enter pet information.";
-   } else {
-       $pet = $input_pet;
-   }
+    // Validate pet information
+    $input_pet = trim($_POST["pet"]);
+    if (empty($input_pet)) {
+        $pet_err = "Please enter pet information.";
+    } else {
+        $pet = $input_pet;
+    }
 
-   // Validate owner information
-   $input_owner = trim($_POST["owner"]);
-   if (empty($input_owner)) {
-       $owner_err = "Please enter owner information.";
-   } else {
-       $owner = $input_owner;
-   }
+    // Validate owner information
+    $input_owner = trim($_POST["owner"]);
+    if (empty($input_owner)) {
+        $owner_err = "Please enter owner information.";
+    } else {
+        $owner = $input_owner;
+    }
 
+    // Validate and handle image upload
+    if (isset($_FILES['image'])) {
+        $image = $_FILES['image'];
+        $imagefilename = $image['name'];
+        $imagefileerror = $image['error'];
+        $imagefiletemp = $image['tmp_name'];
 
-    // Check input errors before inserting in database
-    if (empty($name_err) && empty($breed_err) && empty($age_err)&& empty($sex_err) &&  empty($color_err) &&  empty($weight_err) && empty($pet_err) && empty($owner_err)) {
+        $filename_separate = explode('.', $imagefilename);
+        $file_extension = strtolower(end($filename_separate));
+        $allowed_extensions = array('jpeg', 'jpg', 'png');
+
+        if (in_array($file_extension, $allowed_extensions)) {
+            $upload_image = 'images/' . $imagefilename;
+            move_uploaded_file($imagefiletemp, $upload_image);
+        } else {
+            $image_err = "Invalid file extension. Only JPEG, JPG, and PNG files are allowed.";
+        }
+    }
+
+    // Check input errors before inserting into the database
+    if (empty($name_err) && empty($breed_err) && empty($age_err) && empty($sex_err) && empty($color_err) && empty($weight_err) && empty($pet_err) && empty($owner_err) && empty($image_err)) {
         // Prepare an insert statement
-        $sql = "INSERT INTO information (name, breed, age, sex, color, weight, pet, owner) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO information (name, breed, age, sex, color, weight, pet, owner, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         if ($stmt = $mysqli->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("ssssssss", $param_name, $param_breed, $param_age, $param_sex, $param_color, $param_weight, $param_pet, $param_owner);
+            $stmt->bind_param("sssssssss", $param_name, $param_breed, $param_age, $param_sex, $param_color, $param_weight, $param_pet, $param_owner, $param_image);
 
             // Set parameters
             $param_name = $name;
             $param_breed = $breed;
             $param_age = $age;
-            $param_sex= $sex;
+            $param_sex = $sex;
             $param_color = $color;
             $param_weight = $weight;
             $param_pet = $pet;
             $param_owner = $owner;
+            $param_image = $upload_image;
 
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
-                // Records created successfully. Redirect to landing page
+                // Records created successfully. Redirect to the landing page
                 header("location: index.php");
                 exit();
             } else {
@@ -117,6 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mysqli->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -140,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="col-md-12">
                     <h2 class="mt-5">Create Record</h2>
                     <p>Please fill this form and submit to add pet record to the database.</p>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
@@ -182,7 +201,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <span class="invalid-feedback"><?php echo $owner_err; ?></span>
                         </div>
 
-                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <div class="form-group">
+                            <label>Image</label>
+                            <input type="file" name="image" class="form-control-file">
+                        </div>
+
+                        <input type="submit" name="submit" class="btn btn-primary" value="Submit">
                         <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>

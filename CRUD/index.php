@@ -55,6 +55,7 @@
                             echo "<th>Weight</th>";
                             echo "<th>Pet Information</th>";
                             echo "<th>Owner Information</th>";
+                            echo "<th>Image</th>"; // Add new column for image
                             echo "</tr>";
                             echo "</thead>";
                             echo "<tbody>";
@@ -69,6 +70,7 @@
                                 echo "<td>" . $row['weight'] . "</td>";
                                 echo "<td>" . $row['pet'] . "</td>";
                                 echo "<td>" . $row['owner'] . "</td>";
+                                echo "<td><img src='" . $row['image'] . "' alt='Pet Image' style='width: 100px; height: auto;'></td>"; // Display image using img tag
                                 echo "<td>";
                                 echo '<a href="read.php?id=' . $row['id'] . '" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                 echo '<a href="update.php?id=' . $row['id'] . '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
@@ -90,6 +92,7 @@
                     // Close connection
                     $mysqli->close();
                     ?>
+
                 </div>
             </div>
         </div>
