@@ -21,54 +21,55 @@
 <p class="space">
 
 </p>
-
 <div class="imgGallery p-2">
-  <div class="row">
-    <div class="col-md-3 pt-2 pb-3">
-      <div class="thumbnail" style="background-color:black">
-        <a href="TouristDest_blogs.php#CandabaSwamp">
-          <img src="../home/img/pawfectmatchlogo.png" alt="Candaba Swamp" style="width:100%">
-        </a>
-        <div class="middle">
-          <div class="text">Pawfect</div>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-3 pt-2 pb-3">
-      <div class="thumbnail">
-        <a href="TouristDest_blogs.php#Arayat">
-          <img src="../home/img/pawfectmatchlogo.png" alt="Mt. Arayat" style="width:100%">
-        </a>
-        <div class="middle">
-          <div class="text">Pawfect</div>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-3 pt-2 pb-3">
-      <div class="thumbnail">
-        <a href="TouristDest_blogs.php#Pinatubo">
-          <img src="../home/img/pawfectmatchlogo.png" alt="Pinatubo" style="width:100%">
-        </a>
-        <div class="middle">
-          <div class="text">Pawfect</div>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-3 pt-2 pb-3">
-      <div class="thumbnail">
-        <a href="TouristDest_blogs.php#AquaBeachClub">
-          <img src="../home/img/pawfectmatchlogo.png" alt="Aqua Beach Club" style="width:100%">
-        </a>
-        <div class="middle">
-          <div class="text">Pawfect</div>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="row">
+<?php
 
+    // Include config file
+    require_once "../login/config.php";
 
-<?php require_once "../components/footer.php"; ?>
+    // Establish database connection
+    $con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+    // Check connection
+    if (!$con) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Function to read posts
+    function readPosts($con) {
+        $sql = "SELECT image, name FROM information";
+        $result = mysqli_query($con, $sql);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $image = $row['image'];
+                $name = $row['name'];
+
+                echo '<div class="col-md-3 pt-2 pb-3">
+                                    <div class="thumbnail" style="background-color:black">
+                                        <a href="#' . $name . '">
+                                            <img src="' . $image . '" alt="' . $name . '" style="width:100%">
+                                        </a>
+                                        <div class="middle">
+                                            <div class="text">' . $name . '</div>
+                                        </div>
+                                    </div>
+                                </div>';
+            }
+        } else {
+            echo "No posts found.";
+        }
+    }
+
+    // Call the readPosts() function
+    readPosts($con);
+
+    // Close the database connection
+    mysqli_close($con);
+    ?>
+
+    <?php require_once "../components/footer.php"; ?>
 
 </body>
 </html>

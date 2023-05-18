@@ -3,7 +3,7 @@
 session_start();
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.html');
+	header('Location: ../profile/logindex.php');
 	exit;
 }
 ?>
@@ -41,5 +41,7 @@ if (!isset($_SESSION['loggedin'])) {
 			<h2>Home Page</h2>
 			<p>Hello there and welcome back, <?=$_SESSION['name']?>!</p>
 		</div>
+
+		<?php require_once "index.php"?>
 	</body>
 </html>

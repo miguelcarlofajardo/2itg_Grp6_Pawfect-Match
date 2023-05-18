@@ -4,7 +4,7 @@ session_start();
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
-$DATABASE_NAME = 'pwlogin';
+$DATABASE_NAME = 'pawfect match';
 
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
@@ -52,7 +52,7 @@ if ($password !== $confirmPassword) {
 }
 
 // Prepare our SQL statement to check if the username already exists.
-if ($stmt = $con->prepare('SELECT id FROM accounts WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT id FROM users WHERE username = ?')) {
     // Bind parameters (s = string), in our case the username is a string so we use "s".
     $stmt->bind_param('s', $username);
     $stmt->execute();
