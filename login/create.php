@@ -128,8 +128,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
                 // Records created successfully. Redirect to the landing page
-                header("location: read.php");
-                exit();
+                $last_id = $mysqli->insert_id;
+                header("location: read.php?id=$last_id");
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
@@ -177,7 +177,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="container">
             <div class="row">
-                    <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+                    <form class="form" action="create.php" method="post" enctype="multipart/form-data">
                     <h2 class="mt-5">Create Record</h2>
                     <p>Please fill this form and submit to add pet record to the database.</p>
                         <div class="form-group">
