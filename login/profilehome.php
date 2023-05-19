@@ -42,6 +42,6 @@ if (!isset($_SESSION['loggedin'])) {
 			<p>Hello there and welcome back, <?=$_SESSION['name']?>!</p>
 		</div>
 
-		<?php require_once "index.php"?>
+		<?php require "crudindex.php"?>
 	</body>
 </html>

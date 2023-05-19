@@ -49,6 +49,7 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
 
     // Close connection
     $mysqli->close();
+
 } else {
     // URL doesn't contain id parameter. Redirect to error page
     header("location: error.php");
@@ -113,9 +114,9 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
                     </div>
                     <div class="form-group">
                         <label>Image</label>
-                        <p><b><?php echo $row["image"]; ?></b></p>
+                        <p><img src="<?php echo $row["image"]; ?>" alt="Pet Image"></p>
                     </div>
-                    <p><a href="index.php" class="btn btn-primary">Back</a></p>
+                    <p><a href="curdindex.php" class="btn btn-primary">Back</a></p>
                 </div>
             </div>
         </div>

@@ -107,11 +107,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check input errors before inserting into the database
     if (empty($name_err) && empty($breed_err) && empty($age_err) && empty($sex_err) && empty($color_err) && empty($weight_err) && empty($pet_err) && empty($owner_err) && empty($image_err)) {
-        // Retrieve the user_id from the users table based on the logged-in user or the desired user
-        $user_id = 1; // Replace with the actual user ID retrieval logic
+        // Retrieve the id from the users table based on the logged-in user or the desired user
+        $userID = $_SESSION['id']; 
 
         // Prepare an insert statement
-        $sql = "INSERT INTO information (user_id, name, breed, age, sex, color, weight, pet, owner, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO information (id, name, breed, age, sex, color, weight, pet, owner, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         if ($stmt = $mysqli->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
                 // Records created successfully. Redirect to the landing page
-                header("location: index.php");
+                header("location: read.php");
                 exit();
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
@@ -217,7 +217,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
 
                         <input type="submit" name="submit" class="btn btn-primary" value="Submit">
-                        <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="crudindex.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>
