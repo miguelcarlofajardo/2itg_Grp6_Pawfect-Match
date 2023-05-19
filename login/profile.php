@@ -49,7 +49,7 @@ $stmt->close();
 			<img src="../home/img/PM-transparent green-logo.png"width="70px" height="65px" id=logo alt="Pawfect Match Logo image" style="margin-left: 100px;" />
 				<div>
 					<h1>Pawfect Match</h1>
-					<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+					<a href="profilehome.php">Home</a>
 					<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 				</div>
 		</nav>
