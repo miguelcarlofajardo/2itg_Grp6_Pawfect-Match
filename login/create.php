@@ -149,77 +149,87 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="UTF-8">
-    <title>Create Record</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .wrapper {
-            width: 600px;
-            margin: 0 auto;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/create.css">
+    <link rel="shortcut icon" href="../home/img/PM-icon.png">
+    <title>Create Pet Record</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container-fluid">
+
+<header>
+        <a href="#" class="logo">
+            <img src="../home/img/PM-transparent green-logo.png" alt="Pawfect Match Logo" class="Logo" width="125" height="125">
+            <span class="brand-name">Pawfect Match</span>
+        </a>
+       
+        <ul class="navbar">
+            <li><a href="../home/index.php">Home</a></li>
+            <li><a href="../about/ourstory.php">Our Story</a></li>
+            <li><a href="../gallery/petlist.php">Meet Your Furbaby</a></li>
+            <li><a href="../article/article.php">Help</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+<br><br><br>
+
+        <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                    <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
                     <h2 class="mt-5">Create Record</h2>
                     <p>Please fill this form and submit to add pet record to the database.</p>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
+                            <input type="text" placeholder="Name" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>" autocomplete="off">
                             <span class="invalid-feedback"><?php echo $name_err; ?></span>
                         </div>
                         <div class="form-group">
-                            <label>Breed</label>
-                            <input type="text" name="breed" class="form-control <?php echo (!empty($breed_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $breed; ?>">
+                            <input type="text" placeholder="Breed" name="breed" class="form-control <?php echo (!empty($breed_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $breed; ?>" autocomplete="off">
                             <span class="invalid-feedback"><?php echo $breed_err; ?></span>
                         </div>
                         <div class="form-group">
-                            <label>Age</label>
-                            <input type="text" name="age" class="form-control <?php echo (!empty($age_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $age; ?>">
+                            <input type="text" placeholder="Age" name="age" class="form-control <?php echo (!empty($age_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $age; ?>" autocomplete="off">
                             <span class="invalid-feedback"><?php echo $age_err; ?></span>
                         </div>
                         <div class="form-group">
-                            <label>Sex</label>
-                            <input type="text" name="sex" class="form-control <?php echo (!empty($sex_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $sex; ?>">
+                            <input type="text" placeholder="Sex" name="sex" class="form-control <?php echo (!empty($sex_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $sex; ?>" autocomplete="off">
                             <span class="invalid-feedback"><?php echo $sex_err; ?></span>
                         </div>
                         <div class="form-group">
-                            <label>Color</label>
-                            <input type="text" name="color" class="form-control <?php echo (!empty($color_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $color; ?>">
+                            <input type="text" placeholder="Color" name="color" class="form-control <?php echo (!empty($color_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $color; ?>" autocomplete="off">
                             <span class="invalid-feedback"><?php echo $color_err; ?></span>
                         </div>
                         <div class="form-group">
-                            <label>Weight</label>
-                            <input type="text" name="weight" class="form-control <?php echo (!empty($weight_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $weight; ?>">
+                            <input type="text" placeholder="Weight (lbs)" name="weight" class="form-control <?php echo (!empty($weight_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $weight; ?>" autocomplete="off">
                             <span class="invalid-feedback"><?php echo $weight_err; ?></span>
                         </div>
                         <div class="form-group">
-                            <label>Pet Information</label>
-                            <input type="text" name="pet" class="form-control <?php echo (!empty($pet_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $pet; ?>">
+                            <input type="text" placeholder="Pet Information" name="pet" class="form-control <?php echo (!empty($pet_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $pet; ?>" autocomplete="off">
                             <span class="invalid-feedback"><?php echo $pet_err; ?></span>
                         </div>
                         <div class="form-group">
-                            <label>Owner Information</label>
-                            <input type="text" name="owner" class="form-control <?php echo (!empty($owner_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $owner; ?>">
+                            <input type="text" placeholder="Owner Information" name="owner" class="form-control <?php echo (!empty($owner_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $owner; ?>" autocomplete="off">
                             <span class="invalid-feedback"><?php echo $owner_err; ?></span>
                         </div>
 
+                        <br>
                         <div class="form-group">
-                            <label>Image</label>
-                            <input type="file" name="image" class="form-control-file">
+                            <label>Please Attach Image of Pet</label><br>
                         </div>
 
-                        <input type="submit" name="submit" class="btn btn-primary" value="Submit">
-                        <a href="crudindex.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <div class="file-input">
+                            <input type="file" id="file" class="file-input__input" name="image">
+                            <label for="file" class="file-input__label">Choose File</label>
+                        </div>
+
+                        <div class="btn">
+                        <input type="submit" name="submit" class="btn1" value="Submit">
+                        <a href="crudindex.php" class="btn2">Cancel</a>
+                        </div>
                     </form>
-                </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
