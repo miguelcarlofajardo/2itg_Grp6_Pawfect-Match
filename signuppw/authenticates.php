@@ -52,7 +52,7 @@ if ($password !== $confirmPassword) {
 }
 
 // Prepare our SQL statement to check if the username already exists.
-if ($stmt = $con->prepare('SELECT users_id FROM users WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT users_id FROM accounts WHERE username = ?')) {
     // Bind parameters (s = string), in our case the username is a string so we use "s".
     $stmt->bind_param('s', $username);
     $stmt->execute();
@@ -66,7 +66,7 @@ if ($stmt = $con->prepare('SELECT users_id FROM users WHERE username = ?')) {
     } else {
         // Username is available, proceed with creating the new account.
         // Prepare an SQL statement to insert the new account into the database.
-        if ($stmt = $con->prepare('INSERT INTO users (username, email, password) VALUES (?, ?, ?)')) {
+        if ($stmt = $con->prepare('INSERT INTO accounts (username, email, password) VALUES (?, ?, ?)')) {
             // Hash the password before storing it in the database.
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             // Bind parameters (s = string).
