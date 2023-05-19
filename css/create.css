@@ -83,7 +83,7 @@ p,label {
   
   .file-input__label {
     /* Customize the appearance of the custom button */
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: #BB6b24;
     color: white;
     cursor: pointer;
