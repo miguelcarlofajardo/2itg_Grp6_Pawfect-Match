@@ -29,7 +29,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <body class="loggedin">
 		<nav class="navtop">
-			<img src="../home/img/PM-transparent green-logo.png"width="70px" height="65px" id=logo alt="Pawfect Match Logo image" style="margin-left: 100px;" />
+			<img src="../home/img/PM-transparent green-logo.png"width="70px" height="65px" id=logo alt="Pawfect Match Logo image" style="margin-left: 100px; margin-top: 18px ; float: left;" />
 				<div>
 					<h1>Pawfect Match</h1>
 					<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
