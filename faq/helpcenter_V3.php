@@ -56,6 +56,14 @@
             padding: 10px;
         }
 
+        /*Anchor Tag/URL modifications*/
+        a:link {
+         color: green;
+        background-color: transparent;
+        text-decoration: none;
+
+        }
+
         #pet-logo {
             width: 100%;
             height: auto;
@@ -72,8 +80,15 @@
 <div class="accordion-container">
     <button class="accordion">How do I adopt a pet?</button>
     <div class="panel">
-        <p>We made it simple for you! To adopt a pet, just visit our adoption page and browse through the available pets. Once you find the pet you are interested in, fill out an adoption application form. After which, one of our adoption coordinators will contact you to schedule a meeting with your furrever buddy.</p>
-    </div>
+    <p style="text-align:left">We made it simple for you! First, to adopt a pet you must first fill out the  
+       
+        <a href="https://docs.google.com/forms/d/1d_qVYcFOFhDMYn8e1OYKvIV-XG7Qs_TsUvPI_wcQOlI/viewform?edit_requested=true"><span style="color:green"> 
+        Pet Adoption Form</span></a>. 
+        It contains simple questions that will help us to know you more.
+        
+        Second, head to our pet adoption page and browse through the available pets. Once you find the pet you are interested in, fill out a pet adoption application form. 
+        After which, one of our pet adoption coordinators will contact you to schedule a meeting with your furrever buddy.</p>
+    </span> </div>
 
     <button class="accordion">How much are the adoption fees?</button>
     <div class="panel">
