@@ -44,26 +44,41 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Delete Record</title>
+    <title>Delete Pet Record</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .wrapper {
-            width: 600px;
-            margin: 0 auto;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/delete.css">
+    <link rel="shortcut icon" href="../home/img/PM-icon.png">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container-fluid">
+<header>
+        <a href="#" class="logo">
+            <img src="../home/img/PM-transparent green-logo.png" alt="Pawfect Match Logo" class="Logo" width="125" height="125">
+            <span class="brand-name">Pawfect Match</span>
+        </a>
+       
+        <ul class="navbar">
+            <li><a href="../home/index.php">Home</a></li>
+            <li><a href="../about/ourstory.php">Our Story</a></li>
+            <li><a href="../gallery/petlist.php">Meet Your Furbaby</a></li>
+            <li><a href="../article/article.php">Help</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+<br><br><br>
+
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mt-5 mb-3">Delete Record</h2>
+                    <h2 class="mt-5 mb-3">Delete Pet Record?</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <div class="alert alert-danger">
+                        <div class="alert alert-primary" role="alert">
                             <input type="hidden" name="id" value="<?php echo trim($_GET["id"]); ?>" />
-                            <p>Are you sure you want to delete this information record?</p>
+                            <p>You cannot retrieve your data once it is deleted!</p>
                             <p>
                                 <input type="submit" value="Yes" class="btn btn-danger">
                                 <a href="crudindex.php" class="btn btn-secondary ml-2">No</a>
@@ -73,7 +88,6 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
                 </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>

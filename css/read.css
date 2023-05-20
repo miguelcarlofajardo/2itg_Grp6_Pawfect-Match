@@ -3,43 +3,40 @@ body{
     background-color:bisque;
     min-height: 100vh;
     padding-bottom: 50px;
+    padding-top: 10rem;
+
 }
 
-.container{
-    width: 50%;
-    height: 50%;
-    align-items: center;
+.container {
+    text-align: center;
+    position: relative;
+  }
+
+  .inner-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 11rem;
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 0.4em;
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    flex-basis: 50%; /* Equal-width for two columns */
+    /* Additional styling for the columns */
+  }
+
+
+.row {
     background-color: #2a4d50;
-    border-radius: 25px;
-    transition: .4s ease-in-out;
-    width: 200%;
-  }
-  
-  .form:hover {
-    transform: scale(1.05);
-    border: 1px solid black;
+    padding-bottom: 2rem;
   }
 
-  
-    .form h2, .form p, .form div {
-    width: 100%;
-  }
-  
-    h2 {
+#image{
+        max-width: 50%;
+        height: 100%;
+}
+
+h1 {
     text-align: center;
     margin: .5em;
+    padding-top: 2rem;
     color: rgb(255, 255, 255);
     background-color: #2a4d50;
     font-family: 'Dongle', sans-serif;
@@ -47,56 +44,26 @@ body{
     font-size: 50px;
   }
 
-
-p,label {
-    text-align: center;
+label {
     color: rgb(255, 255, 255);
     background-color: #2a4d50;
     font-family: 'Dongle', sans-serif;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 2.5rem;
   }
 
-  .form-control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    border-radius: 25px;
-    padding: 0.6em;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: #171717;
-    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-    width: 100%;
-  }
-  
-  .invalid-feedback{
-    color: orange;
+  p{
+    text-align: center;
+    color: rgb(215, 213, 213);
+    background-color: #2a4d50;
+    font-family: 'Dongle', sans-serif;
+    font-weight: bold;
   }
 
-  .file-input__input {
-    display: none; /* Hide the default file input button */
-  }
-  
-  .file-input__label {
-    /* Customize the appearance of the custom button */
-    padding: 5px 10px;
-    background-color: #BB6b24;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+  b{
+    font-size: 1.5rem;
   }
 
-  .form .btn {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 1.5em;
-    margin-bottom: 2.5em;
-  }
-  
 
   .btn1 {
     padding: 0.5em;
@@ -112,37 +79,18 @@ p,label {
     width: 10rem;
     font-family: 'Dongle', sans-serif;
     font-size: 20px;
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
   }
   
   .btn1:hover {
     background-color: #BB6b24;
     color: white;
   }
-  
-  .btn2 {
-    padding: 0.5em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    border-radius: 5px;
-    margin-right: 0.5em;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
-    width: 10rem;
-    font-family: 'Dongle', sans-serif;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  .btn2:hover {
-    background-color: red;
-    color: white;
-  }
 
-  /*--Navbar for Profile--*/
-  *{
+   /*--Navbar for Profile--*/
+   *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
