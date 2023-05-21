@@ -57,7 +57,16 @@
                                 </div>';
             }
         } else {
-            echo "No posts found.";
+            echo '
+                <div class="container">
+                    <div class="cards">
+                    <div class="card color">
+                        <h1 class="tip">No posts found.</h1>
+                        <p class="second-text">Add to profile</p>
+                        </div>
+                    </div>
+                </div>
+                ';
         }
     }
 
