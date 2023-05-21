@@ -22,29 +22,73 @@
 </p>
 
 <div class="container-box">
-  <div class="petimages">
-    <img class="petimg" src="images/download (1).jpg" />
-  </div>
- 
-  <div class="product" style="font-size:90%;">
-    <h4>Max</h4>
-    <p>Adventurous, open to exploration!</p>
-    <h2>P2,500</h2>
-    <p class="desc">Pet Information</p> 
-    Name: Max <br>
-    Breed: Dachshund <br>
-    Age: 1 year old <br>
-    Size: Medium <br>
-    Gender: Male <br>
-    Coat: Short and shiny black fur
+<?php
+    // Include config file
+    require_once "../login/config.php";
 
+    // Establish database connection
+    $con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-<br><br>
-    <p class="ownerinfo">Owner Information</p>
-   <p> Max is looking for an experienced and active owner who can provide him with plenty of mental and physical stimulation.
-</p>
+    // Check connection
+    if (!$con) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Retrieve the pet name from the query string
+    $petName = $_GET['name'];
+
+    // Fetch the pet information from the database
+    $sql = "SELECT * FROM information WHERE name = '" . mysqli_real_escape_string($con, $petName) . "'";
+    $result = mysqli_query($con, $sql);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+
+        // Store the pet information in variables
+        $image = $row['image'];
+        $name = $row['name'];
+        $breed = $row['breed'];
+        $age = $row['age'];
+        $sex = $row['sex'];
+        $color = $row['color'];
+        $weight = $row['weight'];
+        $moreInfo = $row['pet'];
+        $ownerInfo = $row['owner'];
+
+        // Display the pet information
+        echo '
+            <div class="petimages">
+                <img class="petimg" src="' . $image . '" />
+            </div>
+         
+            <div class="product" style="font-size:90%;">
+                <h4>' . $name . '</h4>
+                <p>Unleash Love, One Adoption at a Time!</p>
+                <p class="desc">Pet Information</p> 
+                Name: ' . $name . '<br>
+                Breed: ' . $breed . '<br>
+                Age: ' . $age . '<br>
+                Sex: ' . $sex . '<br>
+                Color: ' . $color . '<br>
+                Weight: ' . $weight . ' (lbs)<br><br>
+                <p>More about ' . $name . ':</p>
+                <p>' . $moreInfo . '</p>
+                <br>
+                <p class="ownerinfo">Owner Information</p>
+                <p>' . $ownerInfo . '</p>
+            
+        ';
+    } else {
+        echo "Pet not found.";
+    }
+
+    // Close the database connection
+    mysqli_close($con);
+?>
+
     <div class="buttons">
-      <button class="add"><span class="adopt">Adopt Now!</span></button>
+      <button class="add" id="adopt-button">
+        <span class="adopt">Adopt Now!</span></button>
       <button class="like"><span class="fav">♥</span></button>
     </div>
   </div>
@@ -52,6 +96,15 @@
 
 
 <?php require_once "../components/footer.php"; ?>
+<script>
+  // Get the adopt button element
+  const adoptButton = document.getElementById('adopt-button');
 
+  // Add click event listener to the button
+  adoptButton.addEventListener('click', () => {
+    // Redirect the user to the specified link
+    window.location.href = 'https://docs.google.com/forms/d/1d_qVYcFOFhDMYn8e1OYKvIV-XG7Qs_TsUvPI_wcQOlI/viewform?edit_requested=true';
+  });
+</script>
 </body>
 </html>

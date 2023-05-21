@@ -47,7 +47,7 @@
 
                 echo '<div class="col-md-3 pt-2 pb-3">
                                     <div class="thumbnail" style="background-color:black">
-                                        <a href="#' . $name . '">
+                                    <a href="petinfo.php?name=' . urlencode($name) . '">
                                             <img src="' . $image . '" alt="' . $name . '" style="width:100%">
                                         </a>
                                         <div class="middle">
