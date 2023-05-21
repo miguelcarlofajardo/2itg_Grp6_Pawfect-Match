@@ -26,12 +26,23 @@
     <img class="petimg" src="images/download (1).jpg" />
   </div>
  
-  <div class="product">
-    <h4>Nike Epic React Flyknit</h4>
-    <p>Women's Running Shoe</p>
-    <h2>$150</h2>
-    <p class="desc">Pet Information</p>
-    <p class="desc">Owner Information</p>
+  <div class="product" style="font-size:90%;">
+    <h4>Max</h4>
+    <p>Adventurous, open to exploration!</p>
+    <h2>P2,500</h2>
+    <p class="desc">Pet Information</p> 
+    Name: Max <br>
+    Breed: Dachshund <br>
+    Age: 1 year old <br>
+    Size: Medium <br>
+    Gender: Male <br>
+    Coat: Short and shiny black fur
+
+
+<br><br>
+    <p class="ownerinfo">Owner Information</p>
+   <p> Max is looking for an experienced and active owner who can provide him with plenty of mental and physical stimulation.
+</p>
     <div class="buttons">
       <button class="add"><span class="adopt">Adopt Now!</span></button>
       <button class="like"><span class="fav">♥</span></button>
