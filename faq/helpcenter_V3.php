@@ -86,7 +86,7 @@
         Pet Adoption Form</span></a>. 
         It contains simple questions that will help us to know you more.
         
-        Second, head to our pet adoption page and browse through the available pets. Once you find the pet you are interested in, fill out a pet adoption application form. 
+        Or you can simply head to our pet adoption page and browse through the available pets. Once you find the pet you are interested in, click the 'Adopt Now!' button and you will be redirected to pet adoption application form. 
         After which, one of our pet adoption coordinators will contact you to schedule a meeting with your furrever buddy.</p>
     </span> </div>
 
