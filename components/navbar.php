@@ -2,8 +2,8 @@
 <link rel="stylesheet" href="../css/login.css">
 <header>
         <a href="#" class="logo">
-            <img src="../home/img/PM-transparent green-logo.png" alt="Pawfect Match Logo" class="Logo" width="125" height="125">
-            <span class="brand-name">Pawfect Match</span>
+        <a href="../home/index.php"> <img src="../home/img/PM-transparent green-logo.png" alt="Pawfect Match Logo" class="Logo" width="125" height="125"></a>
+        <a href="../home/index.php"> <span class="brand-name">Pawfect Match</span> </a>
         </a>
        
         <ul class="navbar">

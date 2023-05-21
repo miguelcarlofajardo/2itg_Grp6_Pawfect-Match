@@ -122,8 +122,8 @@ button:hover .arrow:before {
 }
 .brand-name {
   display: inline-block;
-  vertical-align: middle;
-  font-size: 50px;
+  vertical-align: left;
+  font-size: 70px;
   color: #fff;
 }
 .brand-name:hover {
