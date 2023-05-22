@@ -217,6 +217,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <li><a href="../about/ourstory.php">Our Story</a></li>
             <li><a href="../gallery/petlist.php">Meet Your Furbaby</a></li>
             <li><a href="../article/article.php">Help</a></li>
+            <li><a href="../profile/logindex.php">Logout</a></li>
         </ul>
 
         <div class="bx bx-menu" id="menu-icon"></div>
