@@ -107,10 +107,13 @@ td {
   margin-right: 10px;
   /* Add some spacing between the icons */
   display: inline-block;
+  color: #2a4d50;
 }
 
-.fa {
-  color: #2a4d50;
+i {
+  color: #f19c24;
+  padding-top: 10px;
+  display: inline-block;
 }
 
 .btn {
@@ -119,7 +122,6 @@ td {
   border-style: inset;
   border-radius: 1.5rem;
   font-size: 1rem;
-  
 }
 
 table tr td:last-child {
