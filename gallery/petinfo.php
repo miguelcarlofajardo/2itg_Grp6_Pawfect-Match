@@ -89,7 +89,8 @@
     <div class="buttons">
       <button class="add" id="adopt-button">
         <span class="adopt">Adopt Now!</span></button>
-      <button class="like"><span class="fav">♥</span></button>
+      <button class="like" id="back-button">
+        <span class="fav">Back</span></button>
     </div>
   </div>
 </div>
@@ -104,6 +105,12 @@
   adoptButton.addEventListener('click', () => {
     // Redirect the user to the specified link
     window.location.href = 'https://docs.google.com/forms/d/1d_qVYcFOFhDMYn8e1OYKvIV-XG7Qs_TsUvPI_wcQOlI/viewform?edit_requested=true';
+  });
+
+  const backButton = document.getElementById('back-button');
+
+  backButton.addEventListener('click', () => {
+    window.location.href = 'petlist.php'
   });
 </script>
 </body>
