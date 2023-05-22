@@ -67,7 +67,7 @@
             echo "<th>Age</th>";
             echo "<th>Sex</th>";
             echo "<th>Color</th>";
-            echo "<th>Weight</th>";
+            echo "<th>Weight (lbs)</th>";
             echo "<th>Pet Information</th>";
             echo "<th>Owner Information</th>";
             echo "<th>Image</th>"; // Add new column for image
@@ -88,9 +88,9 @@
                 echo "<td class='pet-info'><div class='cell-content'>" . $row['owner'] . "</div></td>";
                 echo "<td><img src='" . $row['image'] . "' alt='Pet Image' style='width: 100px; height: auto;'></td>"; // Display image using img tag
                 echo "<td>";
-                echo '<a href="read.php?id=' . $row['id'] . '" class="icon" title="View Record" data-toggle="tooltip"><span class="fa fa-id-card"></span></a>';
-                echo '<a href="update.php?id=' . $row['id'] . '" class="icon" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil-square-o"></span></a>';
-                echo '<a href="delete.php?id=' . $row['id'] . '" class="icon" title="Delete Record" data-toggle="tooltip"><span class="fa fa-minus-square"></span></a>';
+                echo '<a href="read.php?id=' . $row['id'] . '" class="icon" ><span class="fa fa-id-card"></span> View </a>';
+                echo '<a href="update.php?id=' . $row['id'] . '" class="icon" ><span class="fa fa-pencil-square-o"></span> Update</a>';
+                echo '<a href="delete.php?id=' . $row['id'] . '" class="icon" ><span class="fa fa-minus-square"></span> Delete</a>';
                 echo "</td>";
                 echo "</tr>";
             }
@@ -103,7 +103,7 @@
             echo '<div class="row">';
             echo '<div class="col">';
             echo '<div class="text-center">';
-            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+            echo '<div class="alert alert-danger"><em>No records found.</em></div>';
             echo '</div>';
         }
     } else {
