@@ -1,20 +1,21 @@
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
-// If the user is not logged in redirect to the login page...
+// If the user is not logged in, redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: ../profile/logindex.php');
-	exit;
+    header('Location: ../profile/logindex.php');
+    exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">	
-	<title>Profile Page</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Profile Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../css/profilehome.css">
     <link rel="shortcut icon" href="../home/img/PM-icon.png">
@@ -28,20 +29,24 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 
 <body class="loggedin">
-		<nav class="navtop">
-			<img src="../home/img/PM-transparent green-logo.png"width="70px" height="65px" id=logo alt="Pawfect Match Logo image" style="margin-left: 100px; margin-top: 18px ; float: left;" />
-				<div>
-					<h1>Pawfect Match</h1>
-					<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-					<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-				</div>
-		</nav>
-		
-		<div class="content">
-			<h2>Home Page</h2>
-			<p>Hello there and welcome back, <?=$_SESSION['name']?>!</p>
-		</div>
+    <nav class="navtop">
+        <img src="../home/img/PM-transparent green-logo.png" width="70px" height="65px" id="logo" alt="Pawfect Match Logo image" style="margin-left: 100px; margin-top: 18px; float: left;" />
+        <div>
+            <h1>Pawfect Match</h1>
+            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        </div>
+    </nav>
 
-		<?php require "crudindex.php"?>
-	</body>
+    <div class="content">
+        <h2>Home Page</h2>
+        <p>Hello there, welcome back, <?php echo $_SESSION['name']; ?>!</p>
+    </div>
+
+    <div class="crud-container">
+        <div class="pet-information">
+            <?php require "crudindex.php"; ?>
+        </div>
+    </div>
+</body>
 </html>

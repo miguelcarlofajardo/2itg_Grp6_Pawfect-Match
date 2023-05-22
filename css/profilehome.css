@@ -27,7 +27,6 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #6194d5;
     justify-content: space-between;
     overflow: auto;
   }
@@ -47,43 +46,46 @@ nav {
   ul li a:hover {
      background-color: rgb(129, 123, 123);
   }
-.login form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 20px;
+  .crud-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
 }
-.login form label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: #3274d6;
-    color: #ffffff;
+
+.pet-information {
+	width: 100%;
+	overflow-x: auto;
+	margin: 0 auto;
+	font-size: 16px;
 }
-.login form input[type="password"], .login form input[type="text"] {
-    width: 310px;
-    height: 50px;
-    border: 1px solid #dee0e4;
-    margin-bottom: 20px;
-    padding: 0 15px;
+
+.pet-information table {
+	padding: 20px;
+	width: 100%;
 }
-.login form input[type="submit"] {
-    width: 100%;
-    padding: 15px;
-   margin-top: 20px;
-    background-color: #3274d6;
-    border: 0;
-    cursor: pointer;
-    font-weight: bold;
-    color: #ffffff;
-    transition: background-color 0.2s;
+
+.pet-information h2 {
+	text-align: center;
 }
-.login form input[type="submit"]:hover {
-  background-color: #ffc516;
-    transition: background-color 0.2s;
+
+.pet-information a.btn {
+	display: block;
+	margin: 20px auto;
+	width: 200px;
+	text-align: center;
+	color: #543f39;
+	border-radius: 21px;
+	padding: 10px;
+	text-decoration: none;
 }
+
+.pet-information a.btn:hover {
+	background-color: #543f39;
+	color: #fff;
+}
+
 
 /* Navbar items */
 

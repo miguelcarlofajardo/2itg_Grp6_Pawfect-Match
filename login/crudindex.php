@@ -22,12 +22,14 @@
     </script>
 </head>
 
-<header>
+
+<body>
+    <header>
         <a href="#" class="logo">
             <img src="../home/img/PM-transparent green-logo.png" alt="Pawfect Match Logo" class="Logo" width="125" height="125">
             <span class="brand-name">Pawfect Match</span>
         </a>
-       
+
         <ul class="navbar">
             <li><a href="../home/index.php">Home</a></li>
             <li><a href="../about/ourstory.php">Our Story</a></li>
@@ -36,78 +38,79 @@
         </ul>
 
         <div class="bx bx-menu" id="menu-icon"></div>
-</header>
-<br><br><br>
+    </header>
+    <br>
 
-<body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mt-5 mb-3 clearfix">
-                        <h2>Pet Information <a href="create.php" class="btn"><i class="fa fa-address-book-o"></i> Add New Pet</a> </h2>
-                        
-                    </div>
-                    <?php
-                    // Include config file
-                    require_once "config.php";
+    <div class="container">
+        <div class="row">
+            <div class="mt-5 mb-3 clearfix">
+                <h2>Pet Information <a href="create.php" class="btn"><i class="fa fa-address-book-o"></i> Add New Pet</a> </h2>
+            </div>
+            <?php
+    // Include config file
+    require_once "config.php";
 
-                    // Attempt select query execution
-                    $sql = "SELECT * FROM information";
-                    if ($result = $mysqli->query($sql)) {
-                        if ($result->num_rows > 0) {
-                            echo '<table class="table table-bordered table-striped table-hover">';
-                            echo "<thead>";
-                            echo "<tr>";
-                            echo "<th>#</th>";
-                            echo "<th>Name</th>";
-                            echo "<th>Breed</th>";
-                            echo "<th>Age</th>";
-                            echo "<th>Sex</th>";
-                            echo "<th>Color</th>";
-                            echo "<th>Weight</th>";
-                            echo "<th>Pet Information</th>";
-                            echo "<th>Owner Information</th>";
-                            echo "<th>Image</th>"; // Add new column for image
-                            echo "<th>Edit Information</th>";
-                            echo "</tr>";
-                            echo "</thead>";
-                            echo "<tbody>";
-                            while ($row = $result->fetch_array()) {
-                                echo "<tr>";
-                                echo "<td>" . $row['id'] . "</td>";
-                                echo "<td>" . $row['name'] . "</td>";
-                                echo "<td>" . $row['breed'] . "</td>";
-                                echo "<td>" . $row['age'] . "</td>";
-                                echo "<td>" . $row['sex'] . "</td>";
-                                echo "<td>" . $row['color'] . "</td>";
-                                echo "<td>" . $row['weight'] . "</td>";
-                                echo "<td>" . $row['pet'] . "</td>";
-                                echo "<td>" . $row['owner'] . "</td>";
-                                echo "<td><img src='" . $row['image'] . "' alt='Pet Image' style='width: 100px; height: auto;'></td>"; // Display image using img tag
-                                echo "<td>";
-                                echo '<a href="read.php?id=' . $row['id'] . '" class="icon" title="View Record" data-toggle="tooltip"><span class="fa fa-id-card"></span></a>';
-                                echo '<a href="update.php?id=' . $row['id'] . '" class="icon" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil-square-o"></span></a>';
-                                echo '<a href="delete.php?id=' . $row['id'] . '" class="icon" title="Delete Record" data-toggle="tooltip"><span class="fa fa-minus-square"></span></a>';
-                                echo "</td>";
-                                echo "</tr>";
-                            }
-                            echo "</tbody>";
-                            echo "</table>";
-                            // Free result set
-                            $result->free();
-                        } else {
-                            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
-                        }
-                    } else {
-                        echo "Oops! Something went wrong. Please try again later.";
-                    }
+    // Attempt select query execution
+    $sql = "SELECT * FROM information";
+    if ($result = $mysqli->query($sql)) {
+        if ($result->num_rows > 0) {
+            echo '<div class="table-container">';
+            echo '<table class="table table-bordered table-striped table-hover">';
+            echo "<thead>";
+            echo "<tr>";
+            echo "<th>#</th>";
+            echo "<th>Name</th>";
+            echo "<th>Breed</th>";
+            echo "<th>Age</th>";
+            echo "<th>Sex</th>";
+            echo "<th>Color</th>";
+            echo "<th>Weight</th>";
+            echo "<th>Pet Information</th>";
+            echo "<th>Owner Information</th>";
+            echo "<th>Image</th>"; // Add new column for image
+            echo "<th>Edit Information</th>";
+            echo "</tr>";
+            echo "</thead>";
+            echo "<tbody>";
+            while ($row = $result->fetch_array()) {
+                echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['name'] . "</td>";
+                echo "<td>" . $row['breed'] . "</td>";
+                echo "<td>" . $row['age'] . "</td>";
+                echo "<td>" . $row['sex'] . "</td>";
+                echo "<td>" . $row['color'] . "</td>";
+                echo "<td>" . $row['weight'] . "</td>";
+                echo "<td class='pet-info'><div class='cell-content'>" . $row['pet'] . "</div></td>";
+                echo "<td class='pet-info'><div class='cell-content'>" . $row['owner'] . "</div></td>";
+                echo "<td><img src='" . $row['image'] . "' alt='Pet Image' style='width: 100px; height: auto;'></td>"; // Display image using img tag
+                echo "<td>";
+                echo '<a href="read.php?id=' . $row['id'] . '" class="icon" title="View Record" data-toggle="tooltip"><span class="fa fa-id-card"></span></a>';
+                echo '<a href="update.php?id=' . $row['id'] . '" class="icon" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil-square-o"></span></a>';
+                echo '<a href="delete.php?id=' . $row['id'] . '" class="icon" title="Delete Record" data-toggle="tooltip"><span class="fa fa-minus-square"></span></a>';
+                echo "</td>";
+                echo "</tr>";
+            }
+            echo "</tbody>";
+            echo "</table>";
+            echo '</div>';
+            // Free result set
+            $result->free();
+        } else {
+            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+        }
+    } else {
+        echo "Oops! Something went wrong. Please try again later.";
+    }
 
-                    // Close connection
-                    $mysqli->close();
-                    ?>
+    // Close connection
+    $mysqli->close();
+?>
 
-                </div>
+
+
         </div>
+
     </div>
 </body>
 

@@ -3,6 +3,7 @@ body{
     background-color:bisque;
     min-height: 100vh;
     padding-bottom: 50px;
+    padding-right: 50px;
 }
 
 .container{
@@ -13,6 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: 11rem;
+    margin-right: 50px;
 }
 .form {
     display: flex;
