@@ -6,6 +6,50 @@ require_once "config.php";
 $name = $breed = $age = $sex = $color = $weight = $pet = $owner = $image = "";
 $name_err = $breed_err = $age_err = $sex_err = $color_err = $weight_err = $pet_err = $owner_err = $image_err = "";
 
+// Check if ID parameter exists in the URL
+if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
+    // Prepare a select statement
+    $sql = "SELECT * FROM information WHERE id = ?";
+
+    if ($stmt = $mysqli->prepare($sql)) {
+        // Bind the parameter
+        $stmt->bind_param("i", $_GET["id"]);
+
+        // Attempt to execute the prepared statement
+        if ($stmt->execute()) {
+            // Store the result
+            $result = $stmt->get_result();
+
+            // Check if the record exists
+            if ($result->num_rows == 1) {
+                // Fetch the record into associative array
+                $row = $result->fetch_assoc();
+
+                // Assign the fetched values to variables
+                $name = $row["name"];
+                $breed = $row["breed"];
+                $age = $row["age"];
+                $sex = $row["sex"];
+                $color = $row["color"];
+                $weight = $row["weight"];
+                $pet = $row["pet"];
+                $owner = $row["owner"];
+                $image = $row["image"];
+            } else {
+                // Redirect to error page if the record doesn't exist
+                header("location: error.php");
+                exit();
+            }
+        } else {
+            echo "Oops! Something went wrong. Please try again later.";
+        }
+    }
+
+    // Close statement
+    $stmt->close();
+}
+
+
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate name
@@ -129,8 +173,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
+                // Get the ID of the updated record
+                $record_id = $mysqli->insert_id;
                 // Records created successfully. Redirect to landing page
-                header("location: profilehome.php");
+                header("location: profilehome.php?id=" . $record_id);
                 exit();
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
