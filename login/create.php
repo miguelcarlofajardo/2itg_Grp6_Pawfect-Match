@@ -225,7 +225,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         <div class="btn">
                         <input type="submit" name="submit" class="btn1" value="Submit">
-                        <a href="crudindex.php" class="btn2">Cancel</a>
+                        <a href="profilehome.php" class="btn2">Cancel</a>
                         </div>
                     </form>
             </div>

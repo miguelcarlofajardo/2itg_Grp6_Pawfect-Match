@@ -81,7 +81,7 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
                             <p>You cannot retrieve your data once it is deleted!</p>
                             <p>
                                 <input type="submit" value="Yes" class="btn btn-danger">
-                                <a href="crudindex.php" class="btn btn-secondary ml-2">No</a>
+                                <a href="profilehome.php" class="btn btn-secondary ml-2">No</a>
                             </p>
                         </div>
                     </form>
