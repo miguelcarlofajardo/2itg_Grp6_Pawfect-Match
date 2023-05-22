@@ -160,73 +160,53 @@ button{
   margin-bottom: 5px;
 }
 
-#menu-icon{
-    font-size: 35px;
-    color: var(--bg-color);
-    cursor: pointer;
-    z-index: 10001;
-    display: none;
+.menu-icon {
+  display: inline-block;
+  font-size: 20px;
+  color: #000; /* Adjust the color as needed */
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
-/*Responsiveness*/
-@media (max-width:1280px){
-  #menu-icon {
-    display: block;
-  }
-    header{
-        padding: 14px 2%;
-        transition: .2s;
-    }
-    .navbar a{
-        padding: 5px 0;
-        margin: 0px 20px;
-    }
-}
-@media (max-width: 1090px) {
-  #menu-icon {
-    display: block;
-  }
-  .navbar {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    width: 270px;
-    height: 29vh;
-    background: var(--main-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    transition: all .50s ease;
-  }
-  .navbar a {
-    display: block;
-    margin: 12px 0;
-    padding: 0px 25px;
-    transition: all .50s ease;
-  }
-  .navbar a:hover {
-    color: #2a4d50;
-    transform: translateY(5px);
-  }
-  .navbar a:active {
-    color: #f19c24;
-  }
-  .navbar.open {
-    right: 20%;
-  }
+.menu-icon:hover {
+  color: #2a4d50; /* Adjust the hover color as needed */
 }
 
-@media (max-width: 768px) {
+
+/* Responsiveness */
+@media (max-width: 1280px) {
   #menu-icon {
-    display: block;
+      display: block;
   }
   header {
-    padding: 14px 2%;
-    transition: .2s;
+      padding: 14px 2%;
+      transition: .2s;
   }
-  .navbar a {
-    padding: 5px 0;
-    margin: 0px 10px;
-    font-size: 0.9rem;
+  .navbar {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: var(--main-color);
+      width: 100%;
+      text-align: center;
+  }
+  .navbar ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+  .navbar ul li {
+      display: block;
+      padding: 10px 0;
+  }
+  .navbar ul li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+  .navbar ul li a:hover {
+      color: #f19c24;
   }
 }
