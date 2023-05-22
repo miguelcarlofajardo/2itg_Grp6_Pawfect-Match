@@ -55,6 +55,8 @@
     $sql = "SELECT * FROM information";
     if ($result = $mysqli->query($sql)) {
         if ($result->num_rows > 0) {
+            echo '<div class="row">';
+            echo '<div class="col">';
             echo '<div class="table-container">';
             echo '<table class="table table-bordered table-striped table-hover">';
             echo "<thead>";
@@ -98,7 +100,11 @@
             // Free result set
             $result->free();
         } else {
+            echo '<div class="row">';
+            echo '<div class="col">';
+            echo '<div class="text-center">';
             echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+            echo '</div>';
         }
     } else {
         echo "Oops! Something went wrong. Please try again later.";
