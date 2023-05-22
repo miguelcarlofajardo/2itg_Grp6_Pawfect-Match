@@ -80,11 +80,6 @@ tbody td:nth-child(9) {
   vertical-align: top;
   word-wrap: break-word;
 }
-.cell-content {
-  max-width: 200px;
-  max-height: 100px;
-  overflow: auto;
-}
 
 tr {
   margin-bottom: 10px;
