@@ -13,8 +13,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 11rem;
-    margin-right: 50px;
+    margin-top: 11em;
+    margin-left: 6em;
 }
 .form {
     display: flex;
