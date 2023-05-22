@@ -108,12 +108,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check input errors before inserting in database
     if (empty($name_err) && empty($breed_err) && empty($age_err) && empty($sex_err) && empty($color_err) && empty($weight_err) && empty($pet_err) && empty($owner_err) && empty($image_err)) {
-        // Prepare an insert statement
-        $sql = "INSERT INTO information (name, breed, age, sex, color, weight, pet, owner, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        // Prepare an update statement
+        $sql = "UPDATE information SET name = ?, breed = ?, age = ?, sex = ?, color = ?, weight = ?, pet = ?, owner = ?, image = ? WHERE id = ?";
 
+        
         if ($stmt = $mysqli->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("sssssssss", $param_name, $param_breed, $param_age, $param_sex, $param_color, $param_weight, $param_pet, $param_owner, $param_image);
+            $stmt->bind_param("sssssssssi", $param_name, $param_breed, $param_age, $param_sex, $param_color, $param_weight, $param_pet, $param_owner, $param_image, $id);
 
             // Set parameters
             $param_name = $name;
