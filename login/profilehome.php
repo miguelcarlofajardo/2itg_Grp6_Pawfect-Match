@@ -29,6 +29,7 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 
 <body class="loggedin">
+    
     <nav class="navtop">
         <img src="../home/img/PM-transparent green-logo.png" width="70px" height="65px" id="logo" alt="Pawfect Match Logo image" style="margin-left: 100px; margin-top: 18px; float: left;" />
         <div>
@@ -37,16 +38,16 @@ if (!isset($_SESSION['loggedin'])) {
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </div>
     </nav>
-
+    
     <div class="content">
-        <h2>Home Page</h2>
+        <h2>User Profile</h2>
         <p>Welcome back, <?php echo $_SESSION['name']; ?>!</p>
-    </div>
+    </div>  
 
-    <div class="crud-container">
         <div class="pet-information">
             <?php require "crudindex.php"; ?>
         </div>
-    </div>
+
+
 </body>
 </html>

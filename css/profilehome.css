@@ -46,19 +46,15 @@ nav {
   ul li a:hover {
      background-color: rgb(129, 123, 123);
   }
-  .crud-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-top: 50px;
-}
 
 .pet-information {
 	width: 100%;
 	overflow-x: auto;
 	margin: 0 auto;
 	font-size: 16px;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
 }
 
 .pet-information table {
@@ -132,24 +128,22 @@ body.loggedin {
 	background-color: #fffef9;
 }
 .content {
-	width: 1000px;
-	padding-left: 500px;
+	width: 100%;
+	margin-top: 6rem;
+	text-align: center;
 }
 .content p{
 	font-size: 50px;
 }
 .content h2 {
-	margin: 0;
 	padding: 25px 0;
 	font-size: 50px;
-    font-family: Open Sans;
+    font-family: 'Dongle', sans-serif;
     font-weight: 200;
 	border-bottom: 1px solid #e0e0e3;
     color: #3d804b;
 }
 .content > p, .content > div {
-	margin: 25px 0;
-	padding: 50px;
 	background-color: #fff;
 }
 .content > p table td, .content > div table td {
@@ -164,7 +158,6 @@ body.loggedin {
 	padding: 5px;
 	margin: 0 0 10px 0;
 }
-
 
 
 /* going to replace/hide these pre-set css, but will keep them in case something goes awry in the code itself
