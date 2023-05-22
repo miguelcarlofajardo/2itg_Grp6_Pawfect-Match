@@ -133,21 +133,23 @@ body.loggedin {
 }
 .content {
 	width: 1000px;
-	margin: 0 auto;
+	padding-left: 500px;
+}
+.content p{
+	font-size: 50px;
 }
 .content h2 {
 	margin: 0;
 	padding: 25px 0;
-	font-size: 22px;
+	font-size: 50px;
     font-family: Open Sans;
     font-weight: 200;
 	border-bottom: 1px solid #e0e0e3;
     color: #3d804b;
 }
 .content > p, .content > div {
-	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 	margin: 25px 0;
-	padding: 25px;
+	padding: 50px;
 	background-color: #fff;
 }
 .content > p table td, .content > div table td {

@@ -40,7 +40,7 @@ if (!isset($_SESSION['loggedin'])) {
 
     <div class="content">
         <h2>Home Page</h2>
-        <p>Hello there, welcome back, <?php echo $_SESSION['name']; ?>!</p>
+        <p>Welcome back, <?php echo $_SESSION['name']; ?>!</p>
     </div>
 
     <div class="crud-container">

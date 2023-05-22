@@ -25,7 +25,7 @@
 
 <body>
     <header>
-        <a href="#" class="logo">
+        <a href="../home/index.php" class="logo">
             <img src="../home/img/PM-transparent green-logo.png" alt="Pawfect Match Logo" class="Logo" width="125" height="125">
             <span class="brand-name">Pawfect Match</span>
         </a>
@@ -35,6 +35,7 @@
             <li><a href="../about/ourstory.php">Our Story</a></li>
             <li><a href="../gallery/petlist.php">Meet Your Furbaby</a></li>
             <li><a href="../article/article.php">Help</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
 
         <div class="bx bx-menu" id="menu-icon"></div>
